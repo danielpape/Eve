@@ -113,6 +113,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *buyButton;
 @property (weak, nonatomic) IBOutlet UILabel *IAPlabel;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (weak, nonatomic) IBOutlet UIView *settingsView;
 
 -(IBAction)touchUpInKnob;
 - (IBAction) rotaryKnobDidChange;

@@ -1,5 +1,4 @@
-dependencies: \
-  /Users/dan/Downloads/Eve-Alarm-57bd633c3472b21f72763a8c14d1157802b5e193/setViewController.m \
-  /Users/dan/Downloads/Eve-Alarm-57bd633c3472b21f72763a8c14d1157802b5e193/setViewController.h \
-  /Users/dan/Downloads/Eve-Alarm-57bd633c3472b21f72763a8c14d1157802b5e193/eve2/eveViewController.h \
-  /Users/dan/Downloads/Eve-Alarm-57bd633c3472b21f72763a8c14d1157802b5e193/eve2/SKProduct+priceAsString.h
+dependencies: /Users/dan/Developer/iOS/EveAlarm/setViewController.m \
+  /Users/dan/Developer/iOS/EveAlarm/setViewController.h \
+  /Users/dan/Developer/iOS/EveAlarm/eve2/eveViewController.h \
+  /Users/dan/Developer/iOS/EveAlarm/eve2/SKProduct+priceAsString.h

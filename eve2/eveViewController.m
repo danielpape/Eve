@@ -1,14 +1,12 @@
 //
 //  eveViewController.m
-//  eve2
+//  Eve Alarm
 //
-//  Created by Daniel Pape on 06/05/2013.
 //  Copyright (c) 2013 Daniel Pape. All rights reserved.
 //
 
 #import "eveViewController.h"
 #import "MHRotaryKnob.h"
-
 
 @interface eveViewController ()
 
@@ -25,16 +23,35 @@ BOOL isPlaying;
 SKProductsRequest *productsRequest;
 NSArray *validProducts;
 
-
 #define IS_IPHONE_5 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
 #define kTutorialPointProductID @"com.danielpape.Eve.seasons"
-
-
-
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    hourFormat = @"h mm a";
+    alarmNameString = @"eveAlarm4.wav";
+    hourOfSleep = 8;
+    self.sleepLengthLabel.text = [NSString stringWithFormat:@"%i hours",hourOfSleep];
+    phoneModel = [[UIDevice currentDevice]model];
+    isPlaying = NO;
+    
+    NSLog(@"%@",phoneModel);
+    
+    defaults = [[NSUserDefaults alloc]init];
+    
+    if ([defaults objectForKey:@"background"] != nil) {
+        NSString *backgroundString = [defaults objectForKey:@"background"];
+        NSLog(@"%@",backgroundString);
+        self.skyBackground.image = [UIImage imageNamed:backgroundString];
+        backgroundName = backgroundString;
+        [defaults synchronize];
+    }else{
+        self.skyBackground.image = [UIImage imageNamed:@"background1.png"];
+        backgroundName = [NSString stringWithFormat:@"background1.png"];
+        [defaults synchronize];
+    }
 
     self.rotaryKnob.interactionStyle = MHRotaryKnobInteractionStyleRotating;
 	self.rotaryKnob.scalingFactor = 1.5f;
@@ -48,7 +65,6 @@ NSArray *validProducts;
 	[self.rotaryKnob setKnobImage:[UIImage imageNamed:@"KnobSky3.png"] forState:UIControlStateNormal];
 	self.rotaryKnob.knobImageCenter = CGPointMake(self.view.bounds.size.width/2.0f, self.view.bounds.size.width/2.0f);
 	[self.rotaryKnob addTarget:self action:@selector(rotaryKnobDidChange) forControlEvents:UIControlEventValueChanged];
-    
     
     self.mondayButton.selected = YES;
     self.tuesdayButton.selected = YES;
@@ -89,20 +105,6 @@ NSArray *validProducts;
     initcenter.x = self.view.bounds.size.width/2;
     initcenter.y = Hm - 400;
     [_skyBack setCenter:initcenter];
-
-    defaults = [[NSUserDefaults alloc]init];
-    
-    if ([defaults objectForKey:@"background"] != nil) {
-        NSString *backgroundString = [defaults objectForKey:@"background"];
-        NSLog(@"%@",backgroundString);
-        self.skyBackground.image = [UIImage imageNamed:backgroundString];
-        backgroundName = backgroundString;
-        [defaults synchronize];
-    }else{
-        self.skyBackground.image = [UIImage imageNamed:@"background1.png"];
-        backgroundName = [NSString stringWithFormat:@"background1.png"];
-        [defaults synchronize];
-    }
     
     if ([[defaults objectForKey:@"background"]  isEqual: @"background1.png"]){
         self.backgroundLabel.text = @"Summer";
@@ -113,15 +115,6 @@ NSArray *validProducts;
     }else if ([[defaults objectForKey:@"background"]  isEqual: @"background6.png"]){
         self.backgroundLabel.text = @"Spring";
     }
-    
-    hourFormat = @"h mm a";
-    alarmNameString = @"eveAlarm4.wav";
-    hourOfSleep = 8;
-    self.sleepLengthLabel.text = [NSString stringWithFormat:@"%i hours",hourOfSleep];
-    phoneModel = [[UIDevice currentDevice]model];
-    isPlaying = NO;
-    
-    NSLog(@"%@",phoneModel);
     
     [self fetchAvailableProducts];
     
@@ -321,22 +314,9 @@ NSArray *validProducts;
     self.infoButton.alpha = 0;
     self.menuButton.alpha = 0;
     
-    CGPoint center = [self.daysView center];
-    center.x = self.view.bounds.size.width/2;
-    
-    CGPoint daysCenter = [self.menuView center];
-//    daysCenter.x = self.view.bounds.size.width/2;
-    if(IS_IPHONE_5){
-        daysCenter.y = 300;}else{
-            center.y = 300;
-        };
-    [self.menuView setCenter:daysCenter];
-    
-    if(IS_IPHONE_5){
-        center.y = 380;}else{
-            center.y = 280;
-        }
-    [self.daysView setCenter:center];
+    CGPoint daysCenter = [self.daysView center];
+    daysCenter.y = self.view.bounds.size.height-150;
+    [self.daysView setCenter:daysCenter];
     self.setAlarmButton.alpha = 0;
     [UIView commitAnimations];
     
@@ -389,7 +369,7 @@ NSArray *validProducts;
 
 - (IBAction) setAlarm {
     
-    
+    NSLog(@"Set Alarm button tapped");
     /* NSDate *alarmTime = [[NSDate date] dateByAddingTimeInterval: self.rotaryKnob.value*800];
     NSLog(@"alarm time is %@",alarmTime );
     NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
@@ -500,14 +480,6 @@ NSArray *validProducts;
         NSLog(@"Sunday Alarm Set");
     }
     
-    CGPoint center = [self.menuView center];
-//    center.x = self.view.bounds.size.width/2;
-    if(IS_IPHONE_5){
-        center.y = 495;}else{
-    center.y = 405;
-        };
-    [self.menuView setCenter:center];
-    
     self.eveWillWakeLabel.alpha = 1;
     self.menuBackground.alpha = 0;
     
@@ -589,15 +561,6 @@ NSArray *validProducts;
         [UIView beginAnimations:nil context:NULL];
         [UIView setAnimationDuration:0.5];
         [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-        CGPoint center = [self.menuView center];
-//        center.x = self.view.bounds.size.width/2;
-    
-    if(IS_IPHONE_5){
-        center.y = 425;
-    }else{
-        center.y = 335;
-    }
-        [self.menuView setCenter:center];
         
         CGPoint menuButtonCenter = [self.menuButton center];
         menuButtonCenter.x = 296;
@@ -782,16 +745,6 @@ NSArray *validProducts;
         [UIView beginAnimations:nil context:NULL];
         [UIView setAnimationDuration:0.5];
         [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-        CGPoint center = [self.menuView center];
-        center.x = self.view.bounds.size.width/2;
-    
-    if(IS_IPHONE_5){
-        center.y = 670;
-    }else{
-        center.y = 585;
-    }
-        
-        [self.menuView setCenter:center];
     
         self.infoButton.alpha = 1;
         self.menuButton.alpha = 1;
@@ -858,14 +811,6 @@ NSArray *validProducts;
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:0.5];
     [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-    CGPoint center = [self.menuView center];
-//    center.x = self.view.bounds.size.width/2;
-    if(IS_IPHONE_5){
-        center.y = 670;
-    }else{
-        center.y = 585;
-    }
-    [self.menuView setCenter:center];
     
     self.infoButton.alpha = 1;
     self.menuButton.alpha = 1;
@@ -1110,23 +1055,11 @@ NSArray *validProducts;
 
 - (IBAction) pressResetButton{
     
-    CGPoint center = [self.menuView center];
-//    center.x = self.view.bounds.size.width/2;
-    center.y = 800;
-    [self.menuView setCenter:center];
-    
     [[UIApplication sharedApplication]cancelAllLocalNotifications];
     NSLog(@"Alarms Cancelled");
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:0.5];
     [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-//    center.x = self.view.bounds.size.width/2;
-    if(IS_IPHONE_5){
-        center.y = 670;
-    }else{
-        center.y = 585;
-    }
-    [self.menuView setCenter:center];
     
     self.menuButton.alpha = 1;
     self.infoButton.alpha = 1;
@@ -1244,14 +1177,6 @@ NSArray *validProducts;
     [UIView setAnimationDuration:0.5];
     [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
     
-    CGPoint menuCenter = [self.menuView center];
-//    menuCenter.x = self.view.bounds.size.width/2;
-    if(IS_IPHONE_5){
-        menuCenter.y = 670;}else{
-        menuCenter.y = 585;
-    }
-    [self.menuView setCenter:menuCenter];
-    
     CGPoint daysCenter = [self.daysView center];
 //    daysCenter.x = self.view.bounds.size.width/2;
     if(IS_IPHONE_5){
@@ -1318,7 +1243,18 @@ NSArray *validProducts;
     if (self.mondayButton.selected == NO && self.tuesdayButton.selected == NO && self.wednesdayButton.selected == NO && self.thursdayButton.selected == NO && self.fridayButton.selected == NO && self.saturdayButton.selected == NO && self.sundayButton.selected == NO) {
         
     }else{
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.5];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+    CGPoint daysCenter = [self.daysView center];
+    daysCenter.y = 800;
+    [self.daysView setCenter:daysCenter];
     
+    CGPoint settingsCenter = [self.settingsView center];
+    settingsCenter.y = self.view.bounds.size.height-150;
+    [self.settingsView setCenter:settingsCenter];
+    [UIView commitAnimations];
+        
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:0.5];
     [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
@@ -1329,15 +1265,6 @@ NSArray *validProducts;
     }else{
         returnButtoncenter.y = 860;
     }
-    [self.daysView setCenter:returnButtoncenter];
-    
-    CGPoint center = [self.menuView center];
-//    center.x = self.view.bounds.size.width/2;
-    if(IS_IPHONE_5){
-        center.y = 425;}else{
-            center.y = 335;
-        }
-    [self.menuView setCenter:center];
     
     self.rotaryKnob.alpha = 0;
         
@@ -2249,15 +2176,6 @@ NSArray *validProducts;
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:0.5];
     [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-    CGPoint center = [self.menuView center];
-//    center.x = self.view.bounds.size.width/2;
-    
-    if(IS_IPHONE_5){
-        center.y = 635;
-    }else{
-        center.y = 545;
-    }
-    [self.menuView setCenter:center];
     
     CGPoint menuButtonCenter = [self.menuButton center];
     menuButtonCenter.x = 296;

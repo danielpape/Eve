@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3706670C1E241D6F000BFB4E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3706670B1E241D6F000BFB4E /* Launch Screen.storyboard */; };
 		371B362B175A5B7300E962AA /* leftarrow2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 371B3629175A5B7300E962AA /* leftarrow2@2x.png */; };
 		371B362C175A5B7300E962AA /* rightarrow2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 371B362A175A5B7300E962AA /* rightarrow2@2x.png */; };
 		371CA90F1812FD9600839AE4 /* morningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 371CA90E1812FD9600839AE4 /* morningViewController.m */; };
@@ -90,6 +91,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3706670B1E241D6F000BFB4E /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		371B3629175A5B7300E962AA /* leftarrow2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "leftarrow2@2x.png"; path = "eve2/leftarrow2@2x.png"; sourceTree = "<group>"; };
 		371B362A175A5B7300E962AA /* rightarrow2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "rightarrow2@2x.png"; path = "eve2/rightarrow2@2x.png"; sourceTree = "<group>"; };
 		371CA90D1812FD9600839AE4 /* morningViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = morningViewController.h; sourceTree = "<group>"; };
@@ -211,17 +213,20 @@
 			children = (
 				37BD09BB17693CEB00941613 /* SystemConfiguration.framework */,
 				37BD09B917693CD500941613 /* CoreText.framework */,
+				37880DE51764BD9E00C7F3F5 /* AVFoundation.framework */,
+				37880DD31763D12200C7F3F5 /* AudioToolbox.framework */,
+				37EBDCBF17381D350090D5DC /* QuartzCore.framework */,
+				37F1B2C31737FF5800DFEBCB /* Images */,
+				37F1B2A41737FDDD00DFEBCB /* eve2 */,
+				37F1B29D1737FDDD00DFEBCB /* Frameworks */,
+				37F1B29C1737FDDD00DFEBCB /* Products */,
 				37EE1E3017667A4300335EFC /* evelogo4_57.png */,
 				37EE1E2E17667A3400335EFC /* evelogo4_114.png */,
-				37880DE51764BD9E00C7F3F5 /* AVFoundation.framework */,
 				37880DD81763DC8800C7F3F5 /* eveAlarm1.wav */,
 				37F90B121778D52D00E48FB3 /* eveAlarm2.wav */,
 				37880DDF1764A70600C7F3F5 /* eveAlarm3.wav */,
 				37F90B141778D54800E48FB3 /* eveAlarm4.wav */,
 				37880DED1765277100C7F3F5 /* sleepAlarm1.wav */,
-				37880DD31763D12200C7F3F5 /* AudioToolbox.framework */,
-				37EBDCBF17381D350090D5DC /* QuartzCore.framework */,
-				37F1B2C31737FF5800DFEBCB /* Images */,
 				37CC76301861EB3800D6EB22 /* infoIcon.png */,
 				37CC76311861EB3800D6EB22 /* infoIcon@2x.png */,
 				37CC76341861F27F00D6EB22 /* cogInfoIcon.png */,
@@ -230,9 +235,6 @@
 				37CC7639186257C200D6EB22 /* IAPimage@2x.png */,
 				37CC763C18625A9000D6EB22 /* IAPbg1.png */,
 				37CC763D18625A9000D6EB22 /* IAPbg1@2x.png */,
-				37F1B2A41737FDDD00DFEBCB /* eve2 */,
-				37F1B29D1737FDDD00DFEBCB /* Frameworks */,
-				37F1B29C1737FDDD00DFEBCB /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -275,6 +277,7 @@
 				37F1B2B91737FDDD00DFEBCB /* eveViewController.h */,
 				37F1B2BA1737FDDD00DFEBCB /* eveViewController.m */,
 				37F1B2A51737FDDD00DFEBCB /* Supporting Files */,
+				3706670B1E241D6F000BFB4E /* Launch Screen.storyboard */,
 			);
 			path = eve2;
 			sourceTree = "<group>";
@@ -449,6 +452,7 @@
 				377C1ACE182D906200C2820C /* background4@2x.png in Resources */,
 				37DEEAF91830235B006765AB /* bgIconBlack.png in Resources */,
 				37A12958181479DC001CCD29 /* background2@2x.png in Resources */,
+				3706670C1E241D6F000BFB4E /* Launch Screen.storyboard in Resources */,
 				37CC762B1861E42500D6EB22 /* menuBack@2x.png in Resources */,
 				37ACF5ED17F72F6F001D4225 /* menuBackBlack@2x.png in Resources */,
 				37F90B151778D54800E48FB3 /* eveAlarm4.wav in Resources */,
