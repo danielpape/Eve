@@ -173,11 +173,6 @@ NSArray *validProducts;
 
 - (IBAction)rotaryKnobDidChange{
     
-    CGPoint daysCenter = [self.daysView center];
-    daysCenter.x = self.view.bounds.size.width/2;
-    daysCenter.y = 1000;
-    [self.daysView setCenter:daysCenter];
-    
     self.setAlarmButton.enabled = NO;
     self.wakeTimeLabel.alpha = 1;
     
@@ -313,12 +308,17 @@ NSArray *validProducts;
     
     self.infoButton.alpha = 0;
     self.menuButton.alpha = 0;
+    self.rotaryKnob.alpha = 0;
+    self.reminderText.alpha = 0;
     
     CGPoint daysCenter = [self.daysView center];
     daysCenter.y = self.view.bounds.size.height-150;
     [self.daysView setCenter:daysCenter];
     self.setAlarmButton.alpha = 0;
     [UIView commitAnimations];
+    
+    [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(dismissMenuView) userInfo:nil repeats:NO];
+
     
     
     /*
@@ -365,6 +365,10 @@ NSArray *validProducts;
 
      */
     
+}
+
+-(void) dismissMenuView {
+    self.menuView.alpha = 0;
 }
 
 - (IBAction) setAlarm {
@@ -1178,19 +1182,43 @@ NSArray *validProducts;
     [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
     
     CGPoint daysCenter = [self.daysView center];
-//    daysCenter.x = self.view.bounds.size.width/2;
-    if(IS_IPHONE_5){
-        daysCenter.y = 1000;}else{
-            daysCenter.y = 1000;
-        };
+    daysCenter.y = self.view.bounds.size.height+1000;
     [self.daysView setCenter:daysCenter];
     
     self.setAlarmButton.alpha = 1;
+    self.rotaryKnob.alpha = 0.4;
+    self.menuView.alpha = 1;
 
     [UIView commitAnimations];
     self.infoButton.alpha = 1;
     self.menuButton.alpha = 1;
     NSLog(@"Button Pressed");
+}
+
+- (IBAction) pressMenuReturnButton {
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.5];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+    
+    self.infoButton.alpha = 0;
+    self.menuButton.alpha = 0;
+    
+    CGPoint settingsCenter = [self.settingsView center];
+    settingsCenter.y = self.view.bounds.size.height+800;
+    [self.settingsView setCenter:settingsCenter];
+    [UIView commitAnimations];
+    
+    [NSTimer scheduledTimerWithTimeInterval:0.4 target:self selector:@selector(presentDaysView) userInfo:nil repeats:NO];
+}
+
+- (void) presentDaysView {
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.5];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+    CGPoint daysCenter = [self.daysView center];
+    daysCenter.y = self.view.bounds.size.height-150;
+    [self.daysView setCenter:daysCenter];
+    [UIView commitAnimations];
 }
 
 - (IBAction) pressMondayButton{
@@ -1247,68 +1275,25 @@ NSArray *validProducts;
     [UIView setAnimationDuration:0.5];
     [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
     CGPoint daysCenter = [self.daysView center];
-    daysCenter.y = 800;
+    daysCenter.y = self.view.bounds.size.height+400;
     [self.daysView setCenter:daysCenter];
-    
-    CGPoint settingsCenter = [self.settingsView center];
-    settingsCenter.y = self.view.bounds.size.height-150;
-    [self.settingsView setCenter:settingsCenter];
-    [UIView commitAnimations];
         
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:0.5];
     [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
     CGPoint returnButtoncenter = [self.daysView center];
     returnButtoncenter.x = self.view.bounds.size.width/2;
-    if(IS_IPHONE_5){
-        returnButtoncenter.y = 910;
-    }else{
-        returnButtoncenter.y = 860;
+        
+    [NSTimer scheduledTimerWithTimeInterval:0.4 target:self selector:@selector(presentMenuView) userInfo:nil repeats:NO];
+
     }
-    
-    self.rotaryKnob.alpha = 0;
-        
-    CGPoint backgroundLabelCenter = [self.backgroundLabelView center];
-    backgroundLabelCenter.x = self.view.bounds.size.width/2;
-    backgroundLabelCenter.y = 80;
-    [self.backgroundLabelView setCenter:backgroundLabelCenter];
-    
-    CGPoint soundNameLabelCenter = [self.soundNameLabelView center];
-    soundNameLabelCenter.x = self.view.bounds.size.width/2;
-    soundNameLabelCenter.y = 150;
-    [self.soundNameLabelView setCenter:soundNameLabelCenter];
-    
-    CGPoint sleepLengthLabelCenter = [self.sleepLengthLabelView center];
-    sleepLengthLabelCenter.x = self.view.bounds.size.width/2;
-    sleepLengthLabelCenter.y = 220;
-    [self.sleepLengthLabelView setCenter:sleepLengthLabelCenter];
-    
-    CGPoint setAlarmButtonViewCenter = [self.setAlarmButtonView center];
-    setAlarmButtonViewCenter.x = self.view.bounds.size.width/2;
-    setAlarmButtonViewCenter.y = 290;
-    [self.setAlarmButtonView setCenter:setAlarmButtonViewCenter];
-    
-    CGPoint returnSetSettingsViewCenter = [self.returnSetSettingsView center];
-    returnSetSettingsViewCenter.x = self.view.bounds.size.width/2;
-    returnSetSettingsViewCenter.y = 360;
-    [self.returnSetSettingsView setCenter:returnSetSettingsViewCenter];
-    
-    CGPoint menuButtonCenter = [self.menuButton center];
-    menuButtonCenter.x = 296;
-    menuButtonCenter.y = 500;
-    [self.menuButton setCenter:menuButtonCenter];
-        
-        CGPoint infoButtonCenter = [self.infoButton center];
-        infoButtonCenter.x = 26;
-        infoButtonCenter.y = 500;
-        [self.infoButton setCenter:infoButtonCenter];
-    
-    CGPoint closeEveViewCenter = [self.closeEveView center];
-    closeEveViewCenter.x = self.view.bounds.size.width/2;
-    closeEveViewCenter.y = 500;
-    [self.closeEveView setCenter:closeEveViewCenter];
+    }
+
+-(void)presentMenuView {
+    CGPoint settingsCenter = [self.settingsView center];
+    settingsCenter.y = self.view.bounds.size.height-80;
+    [self.settingsView setCenter:settingsCenter];
     [UIView commitAnimations];
-    }
 }
 
 - (void) setMondayAlarm{

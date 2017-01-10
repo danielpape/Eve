@@ -160,6 +160,7 @@
 - (IBAction)purchase:(id)sender;
 - (IBAction)tapNap;
 - (IBAction)tapMap;
+- (IBAction) pressMenuReturnButton;
 
 
 
