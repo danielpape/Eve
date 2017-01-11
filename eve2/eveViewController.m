@@ -1284,10 +1284,39 @@ NSArray *validProducts;
     CGPoint returnButtoncenter = [self.daysView center];
     returnButtoncenter.x = self.view.bounds.size.width/2;
         
-    [NSTimer scheduledTimerWithTimeInterval:0.4 target:self selector:@selector(presentMenuView) userInfo:nil repeats:NO];
+    [NSTimer scheduledTimerWithTimeInterval:0.3 target:self selector:@selector(presentMenuView) userInfo:nil repeats:NO];
 
     }
     }
+
+- (IBAction)pressSettingsContinueButton:(id)sender {
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.5];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+    CGPoint settingsCenter = [self.settingsView center];
+    settingsCenter.y = self.view.bounds.size.height+400;
+    [self.settingsView setCenter:settingsCenter];
+    [UIView commitAnimations];
+    [NSTimer scheduledTimerWithTimeInterval:0.3 target:self selector:@selector(presentAlarmSettings) userInfo:nil repeats:NO];
+    
+}
+
+- (void) presentAlarmSettings {
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.5];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+    self.eveWillWakeLabel.alpha = 1;
+    self.wakeReminderHours.alpha = 1;
+    self.mondayLetter.alpha = 1;
+    self.tuesdayLetter.alpha = 1;
+    self.wednesdayLetter.alpha = 1;
+    self.thursdayLetter.alpha = 1;
+    self.fridayLetter.alpha = 1;
+    self.saturdayLetter.alpha = 1;
+    self.sundayLetter.alpha = 1;
+    self.resetAlarmButton.alpha = 1;
+    [UIView commitAnimations];
+}
 
 -(void)presentMenuView {
     CGPoint settingsCenter = [self.settingsView center];

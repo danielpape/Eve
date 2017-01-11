@@ -114,6 +114,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *IAPlabel;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (weak, nonatomic) IBOutlet UIView *settingsView;
+@property (weak, nonatomic) IBOutlet UIButton *resetAlarmButton;
 
 -(IBAction)touchUpInKnob;
 - (IBAction) rotaryKnobDidChange;
@@ -143,6 +144,8 @@
 - (IBAction) pressSaturdayButton;
 - (IBAction) pressSundayButton;
 - (IBAction) pressDaysContinueButton;
+- (IBAction)pressSettingsContinueButton:(id)sender;
+
 - (void) setMondayAlarm;
 - (void) setTuesdayAlarm;
 - (void) setWednesdayAlarm;
