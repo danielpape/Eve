@@ -116,6 +116,7 @@
 @property (weak, nonatomic) IBOutlet UIView *settingsView;
 @property (weak, nonatomic) IBOutlet UIButton *resetAlarmButton;
 
+- (IBAction)tapResetAlarmButton:(id)sender;
 -(IBAction)touchUpInKnob;
 - (IBAction) rotaryKnobDidChange;
 - (IBAction) setAlarm;

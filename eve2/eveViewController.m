@@ -220,6 +220,13 @@ NSArray *validProducts;
 }
 
 
+- (IBAction)tapResetAlarmButton:(id)sender {
+    [self hideSetAlarmElements];
+    self.menuView.alpha = 1;
+    self.rotaryKnob.alpha = 0.4;
+    self.setAlarmButton.alpha = 1;
+}
+
 -(IBAction)touchUpInKnob{
     
     NSDateFormatter *labelFormat = [[NSDateFormatter alloc] init];
@@ -318,52 +325,6 @@ NSArray *validProducts;
     [UIView commitAnimations];
     
     [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(dismissMenuView) userInfo:nil repeats:NO];
-
-    
-    
-    /*
-    CGPoint center = [self.menuView center];
-    center.x = self.view.bounds.size.width/2;
-    if([phoneModel isEqual: @"iPhone 5"]){
-        center.y = 495;}else{
-    center.y = 405;
-        }
-    [self.menuView setCenter:center];
-    
-    self.soundNameLabelView.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
-    self.rotaryKnob.alpha = 0;
-    
-    CGPoint soundNameLabelCenter = [self.soundNameLabelView center];
-    soundNameLabelCenter.x = self.view.bounds.size.width/2;
-    soundNameLabelCenter.y = 80;
-    [self.soundNameLabelView setCenter:soundNameLabelCenter];
-    
-    CGPoint sleepLengthLabelCenter = [self.sleepLengthLabelView center];
-    sleepLengthLabelCenter.x = self.view.bounds.size.width/2;
-    sleepLengthLabelCenter.y = 150;
-    [self.sleepLengthLabelView setCenter:sleepLengthLabelCenter];
-    
-    CGPoint setAlarmButtonViewCenter = [self.setAlarmButtonView center];
-    setAlarmButtonViewCenter.x = self.view.bounds.size.width/2;
-    setAlarmButtonViewCenter.y = 220;
-    [self.setAlarmButtonView setCenter:setAlarmButtonViewCenter];
-    
-    CGPoint returnSetSettingsViewCenter = [self.returnSetSettingsView center];
-    returnSetSettingsViewCenter.x = self.view.bounds.size.width/2;
-    returnSetSettingsViewCenter.y = 290;
-    [self.returnSetSettingsView setCenter:returnSetSettingsViewCenter];
-    
-    CGPoint menuButtonCenter = [self.menuButton center];
-    menuButtonCenter.x = 296;
-    menuButtonCenter.y = 500;
-    [self.menuButton setCenter:menuButtonCenter];
-    
-    CGPoint closeEveViewCenter = [self.closeEveView center];
-    closeEveViewCenter.x = self.view.bounds.size.width/2;
-    closeEveViewCenter.y = 500;
-    [self.closeEveView setCenter:closeEveViewCenter];
-
-     */
     
 }
 
@@ -652,6 +613,23 @@ NSArray *validProducts;
     [UIView commitAnimations];
 
 
+}
+
+- (void) hideSetAlarmElements {
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.5];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+    self.eveWillWakeLabel.alpha = 0;
+    self.wakeReminderHours.alpha = 0;
+    self.mondayLetter.alpha = 0;
+    self.tuesdayLetter.alpha = 0;
+    self.wednesdayLetter.alpha = 0;
+    self.thursdayLetter.alpha = 0;
+    self.fridayLetter.alpha = 0;
+    self.saturdayLetter.alpha = 0;
+    self.sundayLetter.alpha = 0;
+    self.resetAlarmButton.alpha = 0;
+    [UIView commitAnimations];
 }
 
 - (IBAction) pressInfoReturnButton{
@@ -1298,7 +1276,8 @@ NSArray *validProducts;
     [self.settingsView setCenter:settingsCenter];
     [UIView commitAnimations];
     [NSTimer scheduledTimerWithTimeInterval:0.3 target:self selector:@selector(presentAlarmSettings) userInfo:nil repeats:NO];
-    
+    defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setBool:YES forKey:@"mondayAlarm"];
 }
 
 - (void) presentAlarmSettings {
