@@ -1263,7 +1263,6 @@ NSArray *validProducts;
     returnButtoncenter.x = self.view.bounds.size.width/2;
         
     [NSTimer scheduledTimerWithTimeInterval:0.3 target:self selector:@selector(presentMenuView) userInfo:nil repeats:NO];
-
     }
     }
 
@@ -2343,11 +2342,6 @@ updatedTransactions:(NSArray *)transactions {
 
 - (IBAction)gotoReviews:(id)sender{
     NSString *str = @"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=633081958";
-    //str = [NSString stringWithFormat:@"%@/wa/viewContentsUserReviews?", str];
-    //str = [NSString stringWithFormat:@"%@type=Daniel+Pape&id=", str];
-    
-    // Here is the app id from itunesconnect
-   // str = [NSString stringWithFormat:@"%@633081958", str];
     
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str]];
 }
