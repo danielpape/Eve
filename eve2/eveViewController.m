@@ -220,6 +220,49 @@ NSArray *validProducts;
 }
 
 
+- (IBAction)tapThemeSegmentControl:(id)sender {
+    if (_themeSegmentControl.selectedSegmentIndex==0)
+    {
+        NSLog(@"Segment 1 selected");
+    }
+    else if (_themeSegmentControl.selectedSegmentIndex==1)
+    {
+        NSLog(@"Segment 2 selected");
+    }
+    else if (_themeSegmentControl.selectedSegmentIndex==2)
+    {
+        NSLog(@"Segment 3 selected");
+    }
+    else if (_themeSegmentControl.selectedSegmentIndex==3)
+    {
+        NSLog(@"Segment 4 selected");
+    }
+}
+
+- (IBAction)tapSoundSegmentControl:(id)sender {
+    if (_soundSegmentControl.selectedSegmentIndex==0)
+    {
+        NSLog(@"Sound segment 1 selected");
+    }
+    else if (_soundSegmentControl.selectedSegmentIndex==1)
+    {
+        NSLog(@"Sound segment 2 selected");
+    }
+    else if (_soundSegmentControl.selectedSegmentIndex==2)
+    {
+        NSLog(@"Sound segment 3 selected");
+    }
+    else if (_soundSegmentControl.selectedSegmentIndex==3)
+    {
+        NSLog(@"Sound segment 4 selected");
+    }
+
+}
+
+- (IBAction)slideHoursSlider:(id)sender {
+    self.hoursLabel.text = [NSString stringWithFormat:@"%i",(int)self.hoursSlider.value];
+}
+
 - (IBAction)tapResetAlarmButton:(id)sender {
     [self hideSetAlarmElements];
     self.menuView.alpha = 1;

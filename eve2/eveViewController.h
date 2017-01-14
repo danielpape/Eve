@@ -115,6 +115,13 @@
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (weak, nonatomic) IBOutlet UIView *settingsView;
 @property (weak, nonatomic) IBOutlet UIButton *resetAlarmButton;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *themeSegmentControl;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *soundSegmentControl;
+@property (weak, nonatomic) IBOutlet UISlider *hoursSlider;
+- (IBAction)tapThemeSegmentControl:(id)sender;
+- (IBAction)tapSoundSegmentControl:(id)sender;
+- (IBAction)slideHoursSlider:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *hoursLabel;
 
 - (IBAction)tapResetAlarmButton:(id)sender;
 -(IBAction)touchUpInKnob;
