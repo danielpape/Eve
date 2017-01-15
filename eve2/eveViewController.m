@@ -1318,8 +1318,7 @@ NSArray *validProducts;
     [self.settingsView setCenter:settingsCenter];
     [UIView commitAnimations];
     [NSTimer scheduledTimerWithTimeInterval:0.3 target:self selector:@selector(presentAlarmSettings) userInfo:nil repeats:NO];
-    defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setBool:YES forKey:@"mondayAlarm"];
+    [self setSundayAlarm];
 }
 
 - (void) presentAlarmSettings {
@@ -1341,7 +1340,7 @@ NSArray *validProducts;
 
 -(void)presentMenuView {
     CGPoint settingsCenter = [self.settingsView center];
-    settingsCenter.y = self.view.bounds.size.height-80;
+    settingsCenter.y = self.view.bounds.size.height-400;
     [self.settingsView setCenter:settingsCenter];
     [UIView commitAnimations];
 }
@@ -2130,6 +2129,7 @@ NSArray *validProducts;
     sundayReminderAlarm.hasAction = YES;
         
     [[UIApplication sharedApplication] scheduleLocalNotification:sundayWakeAlarm];
+    NSLog(@"Sunday alarm set: %@",sundayWakeAlarm);
     
     NSDate *reminderDate = [firedate dateByAddingTimeInterval:-60*60*hourOfSleep];
     
