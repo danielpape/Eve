@@ -1340,7 +1340,7 @@ NSArray *validProducts;
 
 -(void)presentMenuView {
     CGPoint settingsCenter = [self.settingsView center];
-    settingsCenter.y = self.view.bounds.size.height-400;
+    settingsCenter.y = self.view.bounds.size.height-65;
     [self.settingsView setCenter:settingsCenter];
     [UIView commitAnimations];
 }
