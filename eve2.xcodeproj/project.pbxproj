@@ -382,6 +382,7 @@
 				TargetAttributes = {
 					37F1B29A1737FDDD00DFEBCB = {
 						DevelopmentTeam = 6XK8CTGKE3;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -580,6 +581,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 6XK8CTGKE3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/eve2/Vendor/HockeySDK-iOS-3.0.0/HockeySDK.embeddedframework\"",
@@ -588,9 +590,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "eve2/eve2-Prefix.pch";
 				INFOPLIST_FILE = "eve2/eve2-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = Eve;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "fd56c497-6050-4032-b13b-98febe53931b";
+				PROVISIONING_PROFILE_SPECIFIER = "Eve Development";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -599,7 +602,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = 6XK8CTGKE3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/eve2/Vendor/HockeySDK-iOS-3.0.0/HockeySDK.embeddedframework\"",
@@ -608,9 +612,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "eve2/eve2-Prefix.pch";
 				INFOPLIST_FILE = "eve2/eve2-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = Eve;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "093bed94-2e02-4185-a50e-bf226a5254eb";
+				PROVISIONING_PROFILE_SPECIFIER = "Eve Distribution";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

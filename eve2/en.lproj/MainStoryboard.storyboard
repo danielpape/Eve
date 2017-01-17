@@ -28,8 +28,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" image="drag002.png" translatesAutoresizingMaskIntoConstraints="NO" id="Chw-u4-htH">
-                                <rect key="frame" x="88" y="347" width="200" height="55"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="drag002.png" translatesAutoresizingMaskIntoConstraints="NO" id="Chw-u4-htH">
+                                <rect key="frame" x="88" y="349" width="200" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="kQD-GP-s9Y"/>
                                     <constraint firstAttribute="height" constant="55" id="pga-1Q-gmf"/>
@@ -622,7 +622,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HbN-Qa-acw">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HbN-Qa-acw">
                                 <rect key="frame" x="54" y="155" width="266" height="43"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="M" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sf-pK-oi1">
@@ -676,6 +676,9 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="VKG-YQ-juC"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

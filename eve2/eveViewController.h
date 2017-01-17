@@ -56,11 +56,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *menuButton;
 @property (weak, nonatomic) IBOutlet UILabel *menuHourFormatLabel;
 @property (weak, nonatomic) IBOutlet UILabel *alarmNameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *sleepLengthLabel;
 @property (weak, nonatomic) IBOutlet UIView *backgroundLabelView;
 @property (weak, nonatomic) IBOutlet UIView *timeFormatLabelView;
 @property (weak, nonatomic) IBOutlet UIView *soundNameLabelView;
-@property (weak, nonatomic) IBOutlet UIView *sleepLengthLabelView;
 @property (weak, nonatomic) IBOutlet UIButton *setFinalAlarmButton;
 @property (weak, nonatomic) IBOutlet UILabel *reminderTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *eveWillRemindYouTest;
@@ -136,8 +134,6 @@
 - (IBAction) prevAlarm;
 - (IBAction) nextBackground;
 - (IBAction) prevBackground;
-- (IBAction) moreHours;
-- (IBAction) lessHours;
 - (IBAction) pressSetAlarmButton;
 - (IBAction) pressSettingsReturnButton;
 - (IBAction) pressResetButton;

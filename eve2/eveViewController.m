@@ -18,12 +18,10 @@ NSString *hourFormat;
 NSString *dialTime;
 NSString *alarmNameString;
 NSString *reminderTimeString;
-NSString *phoneModel;
 BOOL isPlaying;
 SKProductsRequest *productsRequest;
 NSArray *validProducts;
 
-#define IS_IPHONE_5 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
 #define kTutorialPointProductID @"com.danielpape.Eve.seasons"
 
 - (void)viewDidLoad
@@ -33,11 +31,8 @@ NSArray *validProducts;
     hourFormat = @"h mm a";
     alarmNameString = @"eveAlarm4.wav";
     hourOfSleep = 8;
-    self.sleepLengthLabel.text = [NSString stringWithFormat:@"%i hours",hourOfSleep];
-    phoneModel = [[UIDevice currentDevice]model];
     isPlaying = NO;
     
-    NSLog(@"%@",phoneModel);
     
     defaults = [[NSUserDefaults alloc]init];
     
@@ -71,11 +66,6 @@ NSArray *validProducts;
     self.wednesdayButton.selected = YES;
     self.thursdayButton.selected = YES;
     self.fridayButton.selected = YES;
-    
-    _introView.backgroundColor = [UIColor clearColor];
-    bgToolbar = [[UIToolbar alloc] initWithFrame:_introView.frame];
-    bgToolbar.barStyle = UIBarStyleBlackTranslucent;
-    [_introView.superview insertSubview:bgToolbar belowSubview:_introView];
    
     NSDateFormatter *labelFormat = [[NSDateFormatter alloc] init];
     dialTime = [NSString stringWithFormat:@"%@", [labelFormat stringFromDate:[[NSDate date] dateByAddingTimeInterval: self.rotaryKnob.value*800]]];
@@ -161,12 +151,6 @@ NSArray *validProducts;
     center.x = self.view.bounds.size.width/2;
     center.y = Hm - 400;
     [_skyBack setCenter:center];
-    [UIView commitAnimations];
-
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:1.5];
-    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-    self.introView.alpha = 0;
     [UIView commitAnimations];
 }
 
@@ -441,51 +425,43 @@ NSArray *validProducts;
     [UIView setAnimationDuration:0.5];
     [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
     
-    self.mondayLetter.alpha = 1;
-    self.tuesdayLetter.alpha = 1;
-    self.wednesdayLetter.alpha = 1;
-    self.thursdayLetter.alpha = 1;
-    self.fridayLetter.alpha = 1;
-    self.saturdayLetter.alpha = 1;
-    self.sundayLetter.alpha = 1;
-    
     self.wakeReminderHours.alpha = 1;
     self.reminderText.alpha = 1;
 
     
     if (self.mondayButton.selected == YES) {
         [self setMondayAlarm];
-        [self.mondayLetter setTextColor:[UIColor whiteColor]];
+        self.mondayLetter.alpha = 1;
         NSLog(@"Monday Alarm Set");
     }
     if (self.tuesdayButton.selected == YES) {
         [self setTuesdayAlarm];
-        [self.tuesdayLetter setTextColor:[UIColor whiteColor]];
+        self.tuesdayLetter.alpha = 1;
         NSLog(@"Tuesday Alarm Set");
     }
     if (self.wednesdayButton.selected == YES) {
         [self setWednesdayAlarm];
-        [self.wednesdayLetter setTextColor:[UIColor whiteColor]];
+        self.wednesdayLetter.alpha = 1;
         NSLog(@"Wednesday Alarm Set");
     }
     if (self.thursdayButton.selected == YES) {
         [self setThursdayAlarm];
-        [self.thursdayLetter setTextColor:[UIColor whiteColor]];
+        self.thursdayLetter.alpha = 1;
         NSLog(@"Thursday Alarm Set");
     }
     if (self.fridayButton.selected == YES) {
         [self setFridayAlarm];
-        [self.fridayLetter setTextColor:[UIColor whiteColor]];
+        self.fridayLetter.alpha = 1;
         NSLog(@"Friday Alarm Set");
     }
     if (self.saturdayButton.selected == YES) {
         [self setSaturdayAlarm];
-        [self.saturdayLetter setTextColor:[UIColor whiteColor]];
+        self.saturdayLetter.alpha = 1;
         NSLog(@"Saturday Alarm Set");
     }
     if (self.sundayButton.selected == YES) {
         [self setSundayAlarm];
-        [self.sundayLetter setTextColor:[UIColor whiteColor]];
+        self.sundayLetter.alpha = 1;
         NSLog(@"Sunday Alarm Set");
     }
     
@@ -506,11 +482,6 @@ NSArray *validProducts;
     soundNameLabelCenter.x = self.view.bounds.size.width/2;
     soundNameLabelCenter.y = 500;
     [self.soundNameLabelView setCenter:soundNameLabelCenter];
-    
-    CGPoint sleepLengthLabelCenter = [self.sleepLengthLabelView center];
-    sleepLengthLabelCenter.x = self.view.bounds.size.width/2;
-    sleepLengthLabelCenter.y = 500;
-    [self.sleepLengthLabelView setCenter:sleepLengthLabelCenter];
     
     CGPoint reminderTimeViewCenter = [self.reminderTimeView center];
     reminderTimeViewCenter.x = self.view.bounds.size.width/2;
@@ -595,11 +566,6 @@ NSArray *validProducts;
         soundNameLabelCenter.x = self.view.bounds.size.width/2;
         soundNameLabelCenter.y = 220;
         [self.soundNameLabelView setCenter:soundNameLabelCenter];
-        
-        CGPoint sleepLengthLabelCenter = [self.sleepLengthLabelView center];
-        sleepLengthLabelCenter.x = self.view.bounds.size.width/2;
-        sleepLengthLabelCenter.y = 290;
-        [self.sleepLengthLabelView setCenter:sleepLengthLabelCenter];
         
         CGPoint settingsReturnButtonViewCenter = [self.settingsReturnButtonView center];
         settingsReturnButtonViewCenter.x = self.view.bounds.size.width/2;
@@ -698,11 +664,7 @@ NSArray *validProducts;
     
     CGPoint infoCenter = [self.infoView center];
     infoCenter.x = self.view.bounds.size.width/2;
-    if(IS_IPHONE_5){
-    infoCenter.y = 284;
-    }else{
-        infoCenter.y = 240;
-    }
+    infoCenter.y = 240;
     [self.infoView setCenter:infoCenter];
     
     self.infoView.alpha = 0.8;
@@ -794,11 +756,6 @@ NSArray *validProducts;
         soundNameLabelCenter.x = self.view.bounds.size.width/2;
         soundNameLabelCenter.y = 500;
         [self.soundNameLabelView setCenter:soundNameLabelCenter];
-        
-        CGPoint sleepLengthLabelCenter = [self.sleepLengthLabelView center];
-        sleepLengthLabelCenter.x = self.view.bounds.size.width/2;
-        sleepLengthLabelCenter.y = 500;
-        [self.sleepLengthLabelView setCenter:sleepLengthLabelCenter];
     
         CGPoint closeEveViewCenter = [self.closeEveView center];
         closeEveViewCenter.x = self.view.bounds.size.width/2;
@@ -861,10 +818,6 @@ NSArray *validProducts;
     soundNameLabelCenter.y = 500;
     [self.soundNameLabelView setCenter:soundNameLabelCenter];
     
-    CGPoint sleepLengthLabelCenter = [self.sleepLengthLabelView center];
-    sleepLengthLabelCenter.x = self.view.bounds.size.width/2;
-    sleepLengthLabelCenter.y = 500;
-    [self.sleepLengthLabelView setCenter:sleepLengthLabelCenter];
     [UIView commitAnimations];
     
     CGPoint closeEveViewCenter = [self.closeEveView center];
@@ -1058,17 +1011,6 @@ NSArray *validProducts;
     }
     }
 
-
-- (IBAction) moreHours{
-    if(hourOfSleep <=11)hourOfSleep++;
-    self.sleepLengthLabel.text = [NSString stringWithFormat:@"%i hours",hourOfSleep];
-}
-
-- (IBAction) lessHours{
-    if(hourOfSleep >= 2)hourOfSleep--;
-    self.sleepLengthLabel.text = [NSString stringWithFormat:@"%i hours",hourOfSleep];
-}
-
 - (IBAction) pressResetButton{
     
     [[UIApplication sharedApplication]cancelAllLocalNotifications];
@@ -1138,11 +1080,6 @@ NSArray *validProducts;
     soundNameLabelCenter.x = self.view.bounds.size.width/2;
     soundNameLabelCenter.y = 500;
     [self.soundNameLabelView setCenter:soundNameLabelCenter];
-    
-    CGPoint sleepLengthLabelCenter = [self.sleepLengthLabelView center];
-    sleepLengthLabelCenter.x = self.view.bounds.size.width/2;
-    sleepLengthLabelCenter.y = 500;
-    [self.sleepLengthLabelView setCenter:sleepLengthLabelCenter];
     
     CGPoint reminderTimeViewCenter = [self.reminderTimeView center];
     reminderTimeViewCenter.x = self.view.bounds.size.width/2;
@@ -1309,7 +1246,7 @@ NSArray *validProducts;
     [self.settingsView setCenter:settingsCenter];
     [UIView commitAnimations];
     [NSTimer scheduledTimerWithTimeInterval:0.3 target:self selector:@selector(presentAlarmSettings) userInfo:nil repeats:NO];
-    [self setSundayAlarm];
+    [self setAlarm];
 }
 
 - (void) presentAlarmSettings {
@@ -1318,13 +1255,6 @@ NSArray *validProducts;
     [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
     self.eveWillWakeLabel.alpha = 1;
     self.wakeReminderHours.alpha = 1;
-    self.mondayLetter.alpha = 1;
-    self.tuesdayLetter.alpha = 1;
-    self.wednesdayLetter.alpha = 1;
-    self.thursdayLetter.alpha = 1;
-    self.fridayLetter.alpha = 1;
-    self.saturdayLetter.alpha = 1;
-    self.sundayLetter.alpha = 1;
     self.resetAlarmButton.alpha = 1;
     [UIView commitAnimations];
 }
@@ -2175,14 +2105,6 @@ NSArray *validProducts;
   
     
     [UIView commitAnimations];
-
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:1];
-    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-    self.introView.alpha = 0;
-    bgToolbar.alpha=0;
-    [UIView commitAnimations];
-
 }
 
 -(void) purchased{
@@ -2227,11 +2149,6 @@ NSArray *validProducts;
     soundNameLabelCenter.x = self.view.bounds.size.width/2;
     soundNameLabelCenter.y = 500;
     [self.soundNameLabelView setCenter:soundNameLabelCenter];
-    
-    CGPoint sleepLengthLabelCenter = [self.sleepLengthLabelView center];
-    sleepLengthLabelCenter.x = self.view.bounds.size.width/2;
-    sleepLengthLabelCenter.y = 500;
-    [self.sleepLengthLabelView setCenter:sleepLengthLabelCenter];
     
     CGPoint settingsReturnButtonViewCenter = [self.settingsReturnButtonView center];
     settingsReturnButtonViewCenter.x = self.view.bounds.size.width/2;
