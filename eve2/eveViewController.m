@@ -60,10 +60,10 @@ NSArray *validProducts;
     self.rotaryKnob.defaultValue = 500;
 	self.rotaryKnob.value = self.slider.value;
 	self.rotaryKnob.resetsToDefault = NO;
-    self.rotaryKnob.foregroundImage = [UIImage imageNamed:@"KnobOverlay2.png"];
+//    self.rotaryKnob.foregroundImage = [UIImage imageNamed:@"KnobOverlay2.png"];
 	self.rotaryKnob.backgroundColor = [UIColor clearColor];
 	[self.rotaryKnob setKnobImage:[UIImage imageNamed:@"KnobSky3.png"] forState:UIControlStateNormal];
-	self.rotaryKnob.knobImageCenter = CGPointMake(self.view.bounds.size.width/2.0f, self.view.bounds.size.width/2.0f);
+	self.rotaryKnob.knobImageCenter = CGPointMake(self.rotaryKnob.bounds.size.width/2.0f, self.rotaryKnob.bounds.size.width/2.0f);
 	[self.rotaryKnob addTarget:self action:@selector(rotaryKnobDidChange) forControlEvents:UIControlEventValueChanged];
     
     self.mondayButton.selected = YES;
@@ -260,12 +260,13 @@ NSArray *validProducts;
 }
 
 - (IBAction)slideHoursSlider:(id)sender {
-    self.hoursLabel.text = [NSString stringWithFormat:@"%i",(int)self.hoursSlider.value];
+//    NSLog(@"%i",(int)self.hoursSlider.value);
+//    self.hoursLabel.text = [NSString stringWithFormat:@"%i",(int)self.hoursSlider.value];
 }
 
 - (IBAction)tapResetAlarmButton:(id)sender {
     [self hideSetAlarmElements];
-    self.menuView.alpha = 1;
+    self.menuBackgroundImage.alpha = 1;
     self.rotaryKnob.alpha = 0.4;
     self.setAlarmButton.alpha = 1;
 }
@@ -372,7 +373,7 @@ NSArray *validProducts;
 }
 
 -(void) dismissMenuView {
-    self.menuView.alpha = 0;
+    self.menuBackgroundImage.alpha = 0;
 }
 
 - (IBAction) setAlarm {
@@ -644,7 +645,7 @@ NSArray *validProducts;
     CGPoint center = [self.menuView center];
     center.x = self.view.bounds.size.width/2;
     center.y = 900;
-    [self.menuView setCenter:center];
+    [self.menuBackgroundImage setCenter:center];
 
     self.wakeTimeLabel.alpha = 0;
     
@@ -720,17 +721,7 @@ NSArray *validProducts;
     timeCenter.y = 104;
     [self.wakeTimeLabel setCenter:timeCenter];
     
-    CGPoint center = [self.menuView center];
-    center.x = self.view.bounds.size.width/2;
-    
-    if(IS_IPHONE_5){
-        center.y = 670;
-    }else{
-        center.y = 585;
-    }
-    [self.menuView setCenter:center];
-    
-    self.menuView.alpha = 1;
+    self.menuBackgroundImage.alpha = 1;
     self.wakeTimeLabel.alpha = 1;
     
     [UIView commitAnimations];
@@ -1208,7 +1199,7 @@ NSArray *validProducts;
     
     self.setAlarmButton.alpha = 1;
     self.rotaryKnob.alpha = 0.4;
-    self.menuView.alpha = 1;
+    self.menuBackgroundImage.alpha = 1;
 
     [UIView commitAnimations];
     self.infoButton.alpha = 1;

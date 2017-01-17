@@ -55,7 +55,7 @@ const float MinDistanceSquared = 16.0f;
     
 	_knobImageView = [[UIImageView alloc] initWithFrame:self.bounds];
 	[self addSubview:_knobImageView];
-    
+        
 	[self valueDidChangeFrom:_value to:_value animated:NO];
 }
 

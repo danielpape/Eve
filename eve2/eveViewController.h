@@ -122,6 +122,7 @@
 - (IBAction)tapSoundSegmentControl:(id)sender;
 - (IBAction)slideHoursSlider:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *hoursLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *menuBackgroundImage;
 
 - (IBAction)tapResetAlarmButton:(id)sender;
 -(IBAction)touchUpInKnob;
