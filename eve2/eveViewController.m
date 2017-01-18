@@ -38,7 +38,6 @@ NSArray *validProducts;
     
     if ([defaults objectForKey:@"background"] != nil) {
         NSString *backgroundString = [defaults objectForKey:@"background"];
-        NSLog(@"%@",backgroundString);
         self.skyBackground.image = [UIImage imageNamed:backgroundString];
         backgroundName = backgroundString;
         [defaults synchronize];
@@ -81,15 +80,11 @@ NSArray *validProducts;
     NSString *minutes = [NSString stringWithFormat:@"%@", [labelFormat stringFromDate:[NSDate date]]];
 
     minutesPastHour = [minutes intValue];
-    NSLog(@"minutes = %f",minutesPastHour);
     int hoursInt = [hours intValue];
-    NSLog(@"hours = %i",hoursInt);
 
     float minutesPercentage = (minutesPastHour/60) *100;
     
     float Hm = (hoursInt*100)+minutesPercentage;
-    NSLog(@"%f",Hm);
-    NSLog(@"rotary knob value: %f",self.rotaryKnob.value);
     
     CGPoint initcenter = [_skyBack center];
     initcenter.x = self.view.bounds.size.width/2;
@@ -112,7 +107,6 @@ NSArray *validProducts;
     
    // self.IAPlabel.text = [NSString stringWithFormat:@"price is %@",proUpgradeProduct.priceAsString];
     
-    NSLog(@"iap text= %@",self.IAPlabel.text);
     
     
     
@@ -141,8 +135,6 @@ NSArray *validProducts;
     float minutesPercentage = (minutesPastHour/60) *100;
     
     float Hm = (hoursInt*100)+minutesPercentage;
-    NSLog(@"%f",Hm);
-    NSLog(@"%f",self.rotaryKnob.value);
     
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:0.0];
@@ -179,14 +171,10 @@ NSArray *validProducts;
     firedate = [[NSDate date] dateByAddingTimeInterval: self.rotaryKnob.value*800];
     
     minutesPastHour = [minutes intValue];
-    NSLog(@"minutes past hour: %@",minutes);
     int hoursInt = [hours intValue];
     float minutesPercentage = (minutesPastHour/60) *100;
     
     float Hm = (hoursInt*100)+minutesPercentage;
-    NSLog(@"%f",Hm);
-    NSLog(@"Rotary Knob Value: %f",self.rotaryKnob.value);
-
     
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:0];
@@ -199,7 +187,6 @@ NSArray *validProducts;
     
     [UIView commitAnimations];
     
-    NSLog(@"%f",minutesPastHour);
 
 }
 
@@ -207,37 +194,45 @@ NSArray *validProducts;
 - (IBAction)tapThemeSegmentControl:(id)sender {
     if (_themeSegmentControl.selectedSegmentIndex==0)
     {
-        NSLog(@"Segment 1 selected");
+        backgroundName = @"background1.png";
+        self.skyBackground.image = [UIImage imageNamed:@"background1"];
     }
     else if (_themeSegmentControl.selectedSegmentIndex==1)
     {
-        NSLog(@"Segment 2 selected");
+        backgroundName = @"background2.png";
+        self.skyBackground.image = [UIImage imageNamed:@"background2"];
     }
     else if (_themeSegmentControl.selectedSegmentIndex==2)
     {
-        NSLog(@"Segment 3 selected");
+        backgroundName = @"background3.png";
+        self.skyBackground.image = [UIImage imageNamed:@"background3"];
     }
     else if (_themeSegmentControl.selectedSegmentIndex==3)
     {
-        NSLog(@"Segment 4 selected");
+        backgroundName = @"background4.png";
+        self.skyBackground.image = [UIImage imageNamed:@"background4"];
     }
 }
 
 - (IBAction)tapSoundSegmentControl:(id)sender {
     if (_soundSegmentControl.selectedSegmentIndex==0)
     {
+        alarmNameString = @"eveAlarm1.wav";
         NSLog(@"Sound segment 1 selected");
     }
     else if (_soundSegmentControl.selectedSegmentIndex==1)
     {
+        alarmNameString = @"eveAlarm2.wav";
         NSLog(@"Sound segment 2 selected");
     }
     else if (_soundSegmentControl.selectedSegmentIndex==2)
     {
+        alarmNameString = @"eveAlarm3.wav";
         NSLog(@"Sound segment 3 selected");
     }
     else if (_soundSegmentControl.selectedSegmentIndex==3)
     {
+        alarmNameString = @"eveAlarm4.wav";
         NSLog(@"Sound segment 4 selected");
     }
 
@@ -249,10 +244,21 @@ NSArray *validProducts;
 }
 
 - (IBAction)tapResetAlarmButton:(id)sender {
+    [[UIApplication sharedApplication]cancelAllLocalNotifications];
+    NSLog(@"Alarms Cancelled");
     [self hideSetAlarmElements];
     self.menuBackgroundImage.alpha = 1;
     self.rotaryKnob.alpha = 0.4;
     self.setAlarmButton.alpha = 1;
+    [defaults setBool:NO forKey:@"mondayAlarm"];
+    [defaults setBool:NO forKey:@"tuesdayAlarm"];
+    [defaults setBool:NO forKey:@"wednesdayAlarm"];
+    [defaults setBool:NO forKey:@"thursdayAlarm"];
+    [defaults setBool:NO forKey:@"fridayAlarm"];
+    [defaults setBool:NO forKey:@"saturdayAlarm"];
+    [defaults setBool:NO forKey:@"sundayAlarm"];
+    [defaults synchronize];
+
 }
 
 -(IBAction)touchUpInKnob{
