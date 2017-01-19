@@ -54,7 +54,6 @@ NSArray *validProducts;
     self.rotaryKnob.defaultValue = 500;
 	self.rotaryKnob.value = self.slider.value;
 	self.rotaryKnob.resetsToDefault = NO;
-//    self.rotaryKnob.foregroundImage = [UIImage imageNamed:@"KnobOverlay2.png"];
 	self.rotaryKnob.backgroundColor = [UIColor clearColor];
 	[self.rotaryKnob setKnobImage:[UIImage imageNamed:@"KnobSky3.png"] forState:UIControlStateNormal];
 	self.rotaryKnob.knobImageCenter = CGPointMake(self.rotaryKnob.bounds.size.width/2.0f, self.rotaryKnob.bounds.size.width/2.0f);
@@ -103,49 +102,12 @@ NSArray *validProducts;
     
     [self fetchAvailableProducts];
     
-   // [self requestProUpgradeProductData];
-    
-   // self.IAPlabel.text = [NSString stringWithFormat:@"price is %@",proUpgradeProduct.priceAsString];
-    
-    
-    
-    
 }
 
 - (void)viewDidUnload {
     [self setKnobCentre:nil];
     [super viewDidUnload];
 }
-
-- (IBAction) pressIntroScreenButton{
-    
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"HH mm a"];
-    self.wakeTimeLabel.text = [NSString stringWithFormat:@"%@",[dateFormat stringFromDate:[NSDate date]]];
-    
-    NSDateFormatter *dateForAlarm = [[NSDateFormatter alloc] init];
-    [dateForAlarm setDateFormat:@"HH"];
-    NSString *hours = [NSString stringWithFormat:@"%@", [dateFormat stringFromDate:[[NSDate date] dateByAddingTimeInterval: self.rotaryKnob.value*800]]];
-    
-    [dateForAlarm setDateFormat:@"mm"];
-    NSString *minutes = [NSString stringWithFormat:@"%@", [dateFormat stringFromDate:[[NSDate date] dateByAddingTimeInterval: self.rotaryKnob.value*800]]];
-    
-    minutesPastHour = [minutes intValue];
-    int hoursInt = [hours intValue];
-    float minutesPercentage = (minutesPastHour/60) *100;
-    
-    float Hm = (hoursInt*100)+minutesPercentage;
-    
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:0.0];
-    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-    CGPoint center = [_skyBack center];
-    center.x = self.view.bounds.size.width/2;
-    center.y = Hm - 400;
-    [_skyBack setCenter:center];
-    [UIView commitAnimations];
-}
-
 
 - (IBAction)rotaryKnobDidChange{
     
@@ -375,60 +337,6 @@ NSArray *validProducts;
 - (IBAction) setAlarm {
     
     NSLog(@"Set Alarm button tapped");
-    /* NSDate *alarmTime = [[NSDate date] dateByAddingTimeInterval: self.rotaryKnob.value*800];
-    NSLog(@"alarm time is %@",alarmTime );
-    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    
-    [calendar setTimeZone:[NSTimeZone systemTimeZone]];
-    
-    NSDateComponents *alarmComponent = [calendar components:( NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit ) fromDate:alarmTime];
-    
-    NSDateComponents *todayComponent = [calendar components:( NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit ) fromDate:[NSDate date]];
-    
-    [alarmComponent setYear:todayComponent.year];
-    [alarmComponent setMonth:todayComponent.month];
-    [alarmComponent setDay:todayComponent.day];
-    [alarmComponent setHour:alarmComponent.hour];
-    [alarmComponent setMinute:alarmComponent.minute];
-    
-    provisionalAlarmTime = [calendar dateFromComponents:alarmComponent];
-    
-    NSComparisonResult result = [provisionalAlarmTime compare:[NSDate date]];
-    
-    if(result==NSOrderedAscending)
-        provisionalAlarmTime = [provisionalAlarmTime dateByAddingTimeInterval:60*60*24];
-        
-    UILocalNotification *wakeAlarm = [[UILocalNotification alloc]init];
-    wakeAlarm.fireDate = provisionalAlarmTime;
-    wakeAlarm.alertBody = [self wakeMessage];
-    wakeAlarm.soundName = alarmNameString;
-    
-    [wakeAlarm setHasAction:YES];
-    
-    [[UIApplication sharedApplication] scheduleLocalNotification:wakeAlarm];
-    NSLog(@"alarm is set for %@",provisionalAlarmTime);
-    
-    UILocalNotification *reminderAlarm = [[UILocalNotification alloc]init];
-    
-    reminderAlarm.fireDate = [provisionalAlarmTime dateByAddingTimeInterval:-hourOfSleep*60*60];
-    reminderAlarm.alertBody = @"Feeling sleepy? If you go to bed now, you will feel refreshed & energised in the morning";
-    reminderAlarm.soundName = @"sleepAlarm1.wav";
-        
-    NSComparisonResult reminderResult = [[provisionalAlarmTime dateByAddingTimeInterval:-hourOfSleep*60*60] compare:[NSDate date]];
-    
-    if(reminderResult==NSOrderedDescending){
-        [[UIApplication sharedApplication] scheduleLocalNotification:reminderAlarm];
-        NSLog(@"Reminder alarm set for %@",[provisionalAlarmTime dateByAddingTimeInterval:-hourOfSleep*60*60]);
-        
-        NSUserDefaults *alarmTime = [NSUserDefaults standardUserDefaults];
-        [alarmTime setObject:provisionalAlarmTime forKey:@"alarmKey1"];
-    }
-    
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc]init];
-    [dateFormat setDateFormat:hourFormat];
-    
-    self.reminderTimeLabel.text = [dateFormat stringFromDate:[provisionalAlarmTime dateByAddingTimeInterval:-hourOfSleep*60*60]];
-    */
     
     self.wakeReminderHours.text = [NSString stringWithFormat:@"and will remind you %d hours before", hourOfSleep];
     [NSString stringWithFormat:@"Alarm & reminders set on:"];
@@ -439,7 +347,6 @@ NSArray *validProducts;
     
     self.wakeReminderHours.alpha = 1;
     self.reminderText.alpha = 1;
-
     
     if (self.mondayButton.selected == YES) {
         [self setMondayAlarm];
@@ -480,58 +387,6 @@ NSArray *validProducts;
     self.eveWillWakeLabel.alpha = 1;
     self.menuBackground.alpha = 0;
     
-    CGPoint formatLabelCenter = [self.timeFormatLabelView center];
-    formatLabelCenter.x = self.view.bounds.size.width/2;
-    formatLabelCenter.y = 500;
-    [self.timeFormatLabelView setCenter:formatLabelCenter];
-    
-    CGPoint backgroundLabelCenter = [self.backgroundLabelView center];
-    backgroundLabelCenter.x = self.view.bounds.size.width/2;
-    backgroundLabelCenter.y = 500;
-    [self.backgroundLabelView setCenter:backgroundLabelCenter];
-    
-    CGPoint soundNameLabelCenter = [self.soundNameLabelView center];
-    soundNameLabelCenter.x = self.view.bounds.size.width/2;
-    soundNameLabelCenter.y = 500;
-    [self.soundNameLabelView setCenter:soundNameLabelCenter];
-    
-    CGPoint reminderTimeViewCenter = [self.reminderTimeView center];
-    reminderTimeViewCenter.x = self.view.bounds.size.width/2;
-    reminderTimeViewCenter.y = 80;
-    [self.reminderTimeView setCenter:reminderTimeViewCenter];
-        
-    CGPoint settingsReturnButtonViewCenter = [self.settingsReturnButtonView center];
-    settingsReturnButtonViewCenter.x = self.view.bounds.size.width/2;
-    settingsReturnButtonViewCenter.y = 500;
-    [self.settingsReturnButtonView setCenter:settingsReturnButtonViewCenter];
-
-    CGPoint setAlarmButtonViewCenter = [self.setAlarmButtonView center];
-    setAlarmButtonViewCenter.x = self.view.bounds.size.width/2;
-    setAlarmButtonViewCenter.y = 500;
-    [self.setAlarmButtonView setCenter:setAlarmButtonViewCenter];
-    
-    CGPoint closeEveViewCenter = [self.closeEveView center];
-    closeEveViewCenter.x = self.view.bounds.size.width/2;
-    closeEveViewCenter.y = 400;
-    [self.closeEveView setCenter:closeEveViewCenter];
-
-    CGPoint resetButtonViewCenter = [self.resetButtonView center];
-    resetButtonViewCenter.x = self.view.bounds.size.width/2;
-    resetButtonViewCenter.y = 290;
-    [self.resetButtonView setCenter:resetButtonViewCenter];
-    
-    CGPoint setToLoudModeViewCenter = [self.setToLoudModeView center];
-    setToLoudModeViewCenter.x = self.view.bounds.size.width/2;
-    setToLoudModeViewCenter.y = 150;
-    [self.setToLoudModeView setCenter:setToLoudModeViewCenter];
-    
-    CGPoint returnSetSettingsViewCenter = [self.returnSetSettingsView center];
-    returnSetSettingsViewCenter.x = self.view.bounds.size.width/2;
-    returnSetSettingsViewCenter.y = 500;
-    [self.returnSetSettingsView setCenter:returnSetSettingsViewCenter];
-    
-    
-    [UIView commitAnimations];
     [_audioPlayer stop];
     
     defaults = [NSUserDefaults standardUserDefaults];
@@ -540,80 +395,6 @@ NSArray *validProducts;
     [defaults setObject:backgroundName forKey:@"background"];
     [defaults synchronize];
     
-}
-
-- (IBAction) pressSettingsButton{
-        [UIView beginAnimations:nil context:NULL];
-        [UIView setAnimationDuration:0.2];
-        [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-        self.setAlarmButton.alpha = 0;
-    self.dragInstructions.alpha = 0;
-        [UIView commitAnimations];
-    
-        [UIView beginAnimations:nil context:NULL];
-        [UIView setAnimationDuration:0.5];
-        [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-        
-        CGPoint menuButtonCenter = [self.menuButton center];
-        menuButtonCenter.x = 296;
-        menuButtonCenter.y = 500;
-        [self.menuButton setCenter:menuButtonCenter];
-    
-        CGPoint infoButtonCenter = [self.infoButton center];
-        infoButtonCenter.x = 26;
-        infoButtonCenter.y = 500;
-        [self.infoButton setCenter:infoButtonCenter];
-    
-        CGPoint backgroundLabelCenter = [self.backgroundLabelView center];
-        backgroundLabelCenter.x = self.view.bounds.size.width/2;
-        backgroundLabelCenter.y = 80;
-        [self.backgroundLabelView setCenter:backgroundLabelCenter];
-    
-        CGPoint formatLabelCenter = [self.timeFormatLabelView center];
-        formatLabelCenter.x = self.view.bounds.size.width/2;
-        formatLabelCenter.y = 150;
-        [self.timeFormatLabelView setCenter:formatLabelCenter];
-        
-        CGPoint soundNameLabelCenter = [self.soundNameLabelView center];
-        soundNameLabelCenter.x = self.view.bounds.size.width/2;
-        soundNameLabelCenter.y = 220;
-        [self.soundNameLabelView setCenter:soundNameLabelCenter];
-        
-        CGPoint settingsReturnButtonViewCenter = [self.settingsReturnButtonView center];
-        settingsReturnButtonViewCenter.x = self.view.bounds.size.width/2;
-        settingsReturnButtonViewCenter.y = 360;
-        [self.settingsReturnButtonView setCenter:settingsReturnButtonViewCenter];
-    
-        CGPoint closeEveViewCenter = [self.closeEveView center];
-        closeEveViewCenter.x = self.view.bounds.size.width/2;
-        closeEveViewCenter.y = 500;
-        [self.closeEveView setCenter:closeEveViewCenter];
-    
-    self.rotaryKnob.alpha = 0;
-        
-        [UIView commitAnimations];
-        
-    }
-
--(IBAction)pressInfoButton{
-    CGPoint infoCenter = [self.infoView center];
-    infoCenter.x = self.view.bounds.size.width/20;
-    infoCenter.y = 50;
-    [self.infoView setCenter:infoCenter];
-    
-    self.reminderText.alpha=0;
-
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:0.35];
-    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-    
-    self.rotaryKnob.alpha = 0;
-    self.setAlarmButton.alpha = 0;
-    self.dragInstructions.alpha = 0;
-    [UIView commitAnimations];
-    
-    [NSTimer scheduledTimerWithTimeInterval:0.4 target:self selector:@selector(removeMenuView) userInfo:nil repeats:NO];
-     [NSTimer scheduledTimerWithTimeInterval:0.8 target:self selector:@selector(resizeInfoView) userInfo:nil repeats:NO];
 }
 
 - (void)removeMenuView{
@@ -651,53 +432,6 @@ NSArray *validProducts;
     self.saturdayLetter.alpha = 0;
     self.sundayLetter.alpha = 0;
     self.resetAlarmButton.alpha = 0;
-    [UIView commitAnimations];
-}
-
-- (IBAction) pressInfoReturnButton{
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:0.35];
-    [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
-    
-    self.infoView.alpha = 0;
-    
-    [UIView commitAnimations];
-    
-    [NSTimer scheduledTimerWithTimeInterval:0.4 target:self selector:@selector(replaceHomeView) userInfo:nil repeats:NO];
-    
-     [NSTimer scheduledTimerWithTimeInterval:0.8 target:self selector:@selector(returnRotaryKnob) userInfo:nil repeats:NO];
-
-}
-
--(void)resizeInfoView{
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:0.35];
-    [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
-    
-    CGPoint infoCenter = [self.infoView center];
-    infoCenter.x = self.view.bounds.size.width/2;
-    infoCenter.y = 240;
-    [self.infoView setCenter:infoCenter];
-    
-    self.infoView.alpha = 0.8;
-    [UIView commitAnimations];
-
-}
-
--(void)replaceHomeView {
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:0.5];
-    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-    
-    
-    CGPoint timeCenter = [self.wakeTimeLabel center];
-    timeCenter.x = self.view.bounds.size.width/2;
-    timeCenter.y = 104;
-    [self.wakeTimeLabel setCenter:timeCenter];
-    
-    self.menuBackgroundImage.alpha = 1;
-    self.wakeTimeLabel.alpha = 1;
-    
     [UIView commitAnimations];
 }
 
@@ -866,42 +600,6 @@ NSArray *validProducts;
     }
 }
 
-- (IBAction) nextBackground{
-    if([defaults boolForKey:@"unlocked"]){
-    if([backgroundName isEqual:@"background1.png"]){
-        backgroundName = @"background2.png";
-        self.skyBackground.image = [UIImage imageNamed:@"background5"];
-        self.backgroundLabel.text = @"Autumn";
-        [defaults setObject:backgroundName forKey:@"background"];
-        [defaults synchronize];
-    }else if ([backgroundName isEqual:@"background2.png"]){
-        backgroundName = @"background3.png";
-        self.skyBackground.image = [UIImage imageNamed:@"background3"];
-        self.backgroundLabel.text = @"Winter";
-        [defaults setObject:backgroundName forKey:@"background"];
-        [defaults synchronize];
-    }else if ([backgroundName isEqual:@"background3.png"]){
-        backgroundName = @"background4.png";
-        self.skyBackground.image = [UIImage imageNamed:@"background6"];
-        self.backgroundLabel.text = @"Spring";
-        [defaults setObject:backgroundName forKey:@"background"];
-        [defaults synchronize];
-    }else if ([backgroundName isEqual:@"background4.png"]){
-        backgroundName = @"background1.png";
-        self.skyBackground.image = [UIImage imageNamed:@"background1"];
-        self.backgroundLabel.text = @"Summer";
-        [defaults setObject:backgroundName forKey:@"background"];
-        [defaults synchronize];
-    }
-    }else {
-        [UIView beginAnimations:nil context:NULL];
-        [UIView setAnimationDuration:0.5];
-        [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-        self.IAPView.alpha = 1;
-        [UIView commitAnimations];
-    }
-}
-
 -(IBAction) hideIAPView{
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:0.5];
@@ -909,107 +607,9 @@ NSArray *validProducts;
     self.IAPView.alpha = 0;
     [UIView commitAnimations];
 }
-- (IBAction) prevBackground{
-    if([defaults boolForKey:@"unlocked"]){
-    if([backgroundName isEqual:@"background1.png"]){
-        backgroundName = @"background4.png";
-        self.skyBackground.image = [UIImage imageNamed:@"background4"];
-        self.backgroundLabel.text = @"Spring";
-        [defaults setObject:backgroundName forKey:@"background"];
-        [defaults synchronize];
-    }else if ([backgroundName isEqual:@"background4.png"]){
-        backgroundName = @"background1.png";
-        self.skyBackground.image = [UIImage imageNamed:@"background3"];
-        self.backgroundLabel.text = @"Winter";
-        [defaults setObject:backgroundName forKey:@"background"];
-        [defaults synchronize];
-    }else if ([backgroundName isEqual:@"background3.png"]){
-        backgroundName = @"background2.png";
-        self.skyBackground.image = [UIImage imageNamed:@"background2"];
-        self.backgroundLabel.text = @"Autumn";
-        [defaults setObject:backgroundName forKey:@"background"];
-        [defaults synchronize];
-    }else if ([backgroundName isEqual:@"background2.png"]){
-        backgroundName = @"background1.png";
-        self.skyBackground.image = [UIImage imageNamed:@"background1"];
-        self.backgroundLabel.text = @"Summer";
-        [defaults setObject:backgroundName forKey:@"background"];
-        [defaults synchronize];
-    }
-    }else{
-        [UIView beginAnimations:nil context:NULL];
-        [UIView setAnimationDuration:0.5];
-        [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-        self.IAPView.alpha = 1;
-        [UIView commitAnimations];
-        [self fetchAvailableProducts];
-        
-        //self.IAPlabel.text = [NSString stringWithFormat:NSLocalizedString(@"bla costs are %@%@", nil), [proUpgradeProduct.priceLocale objectForKey:NSLocaleCurrencySymbol], [proUpgradeProduct.price stringValue]];
-        
-        NSLog(@"iap text= %@",self.IAPlabel.text);
-        
-    }
-}
 
-- (IBAction) nextAlarm{
-    
-    if ([alarmNameString isEqual: @"eveAlarm1.wav"]) {
-        alarmNameString = @"eveAlarm2.wav";
-        [self.soundButton setTitle:@"Ludwig" forState:UIControlStateNormal];
-        NSLog(@"alarm name is %@",alarmNameString);
-    }else if ([alarmNameString isEqual: @"eveAlarm2.wav"]){
-        alarmNameString = @"eveAlarm3.wav";
-        NSLog(@"alarm name is %@",alarmNameString);
-        [self.soundButton setTitle:@"Orient" forState:UIControlStateNormal];
-    }else if ([alarmNameString isEqual: @"eveAlarm3.wav"]){
-        alarmNameString = @"eveAlarm4.wav";
-        [self.soundButton setTitle:@"Cassius" forState:UIControlStateNormal];
-        NSLog(@"alarm name is %@",alarmNameString);
-    }else if ([alarmNameString isEqual: @"eveAlarm4.wav"]){
-        alarmNameString = @"eveAlarm1.wav";
-        [self.soundButton setTitle:@"Module" forState:UIControlStateNormal];
-        NSLog(@"alarm name is %@",alarmNameString);
-    }
-    
-    [_audioPlayer stop];
-    isPlaying = NO;
-}
-
-- (IBAction) prevAlarm{
-    
-    if ([alarmNameString isEqual: @"eveAlarm1.wav"]) {
-        alarmNameString = @"eveAlarm4.wav";
-        [self.soundButton setTitle:@"Cassius" forState:UIControlStateNormal];
-        NSLog(@"alarm name is %@",alarmNameString);
-    }else if ([alarmNameString isEqual: @"eveAlarm4.wav"]){
-        alarmNameString = @"eveAlarm3.wav";
-        NSLog(@"alarm name is %@",alarmNameString);
-        [self.soundButton setTitle:@"Orient" forState:UIControlStateNormal];
-    }else if ([alarmNameString isEqual: @"eveAlarm3.wav"]){
-        alarmNameString = @"eveAlarm2.wav";
-        [self.soundButton setTitle:@"Ludwig" forState:UIControlStateNormal];
-        NSLog(@"alarm name is %@",alarmNameString);
-    }else if ([alarmNameString isEqual: @"eveAlarm2.wav"]){
-        alarmNameString = @"eveAlarm1.wav";
-        [self.soundButton setTitle:@"Module" forState:UIControlStateNormal];
-        NSLog(@"alarm name is %@",alarmNameString);
-    }
-    
-    [_audioPlayer stop];
-    isPlaying  = NO;
-}
 
 - (IBAction) pressSoundButton{
-   /* if(isPlaying == NO){CFBundleRef mainBundle = CFBundleGetMainBundle();
-    CFURLRef soundFileURLRef;
-    soundFileURLRef = CFBundleCopyResourceURL(mainBundle, (CFStringRef)@"eveAlarm1", CFSTR ("wav"), NULL);
-    
-    UInt32 soundID;
-    AudioServicesCreateSystemSoundID(soundFileURLRef, &soundID);
-    AudioServicesPlaySystemSound(soundID);
-        isPlaying = YES;
-    */
-    
     NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/%@", [[NSBundle mainBundle] resourcePath],alarmNameString]];
     NSError *error;
     _audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:url error:&error];
