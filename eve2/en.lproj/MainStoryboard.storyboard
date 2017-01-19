@@ -303,8 +303,8 @@
                                     <constraint firstItem="FS7-6o-6e4" firstAttribute="leading" secondItem="Evr-25-DR7" secondAttribute="leading" id="ygZ-ps-Cqb"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RrE-lT-7jN">
-                                <rect key="frame" x="-4" y="750" width="383" height="568"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RrE-lT-7jN">
+                                <rect key="frame" x="-4" y="0.0" width="383" height="568"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sky Theme" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j22-W1-xpq">
                                         <rect key="frame" x="16" y="8" width="351" height="31"/>
@@ -359,10 +359,10 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aGH-iT-zhp">
-                                        <rect key="frame" x="324" y="164" width="43" height="31"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8 hours" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aGH-iT-zhp">
+                                        <rect key="frame" x="224" y="164" width="143" height="31"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="43" id="Q9h-1M-WIN"/>
+                                            <constraint firstAttribute="width" constant="143" id="Q9h-1M-WIN"/>
                                             <constraint firstAttribute="height" constant="31" id="TrC-6T-Nby"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
@@ -373,7 +373,7 @@
                                         <rect key="frame" x="14" y="203" width="355" height="31"/>
                                         <color key="tintColor" red="1" green="0.71961457352752256" blue="0.39614544495204684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <action selector="slideHoursSlider:" destination="2" eventType="valueChanged" id="hwG-8O-iCT"/>
+                                            <action selector="hoursSliderValueChange:" destination="2" eventType="valueChanged" id="2Xw-zn-Y1D"/>
                                         </connections>
                                     </slider>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nWD-75-gCe">
@@ -512,13 +512,13 @@
                             <constraint firstItem="mBu-sv-1c0" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" id="cuC-Gi-0HJ"/>
                             <constraint firstItem="W7W-Kk-MHg" firstAttribute="centerY" secondItem="Web-Ay-8ro" secondAttribute="centerY" id="dEo-uI-98c"/>
                             <constraint firstItem="mhy-ZE-TnF" firstAttribute="leading" secondItem="3" secondAttribute="leadingMargin" constant="-16" id="dKe-At-Bs4"/>
-                            <constraint firstItem="RrE-lT-7jN" firstAttribute="top" secondItem="cKo-kH-sIC" secondAttribute="bottom" constant="750" id="fTF-pL-TaK"/>
                             <constraint firstItem="bR7-JK-FJG" firstAttribute="top" secondItem="m0Z-FF-UZh" secondAttribute="bottom" constant="-22" id="ffG-Qz-CoK"/>
                             <constraint firstItem="Web-Ay-8ro" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" id="g3A-fG-Bdb"/>
                             <constraint firstItem="cGO-SN-mHK" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" id="hRc-6i-Vfu"/>
                             <constraint firstItem="l0V-DK-1Dj" firstAttribute="top" secondItem="mhy-ZE-TnF" secondAttribute="bottom" id="haY-dW-nMS"/>
                             <constraint firstItem="Chw-u4-htH" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" id="kq9-ap-GIO"/>
                             <constraint firstItem="mBu-sv-1c0" firstAttribute="width" secondItem="3" secondAttribute="width" id="nt0-rA-SvY"/>
+                            <constraint firstItem="RrE-lT-7jN" firstAttribute="top" secondItem="cKo-kH-sIC" secondAttribute="bottom" constant="750" id="oev-PD-dDy"/>
                             <constraint firstItem="bR7-JK-FJG" firstAttribute="leading" secondItem="3" secondAttribute="leading" id="qQo-iO-HyX"/>
                             <constraint firstItem="Fg0-AW-bIs" firstAttribute="leading" secondItem="3" secondAttribute="leadingMargin" constant="-20" id="qxF-hr-1jw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="m0Z-FF-UZh" secondAttribute="trailing" id="rRu-1r-7KA"/>

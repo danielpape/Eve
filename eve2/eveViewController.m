@@ -238,9 +238,15 @@ NSArray *validProducts;
 
 }
 
-- (IBAction)slideHoursSlider:(id)sender {
-//    NSLog(@"%i",(int)self.hoursSlider.value);
-//    self.hoursLabel.text = [NSString stringWithFormat:@"%i",(int)self.hoursSlider.value];
+
+- (IBAction)hoursSliderValueChange:(id)sender {
+    self.settingsView.translatesAutoresizingMaskIntoConstraints = YES;
+    self.hoursLabel.text = [NSString stringWithFormat:@"%i hours",(int)self.hoursSlider.value];
+    defaults = [NSUserDefaults standardUserDefaults];
+    NSString *sleepString = [NSString stringWithFormat:@"%d",hourOfSleep];
+    [defaults setObject:sleepString forKey:@"hourOfSleep"];
+    [defaults synchronize];
+
 }
 
 - (IBAction)tapResetAlarmButton:(id)sender {

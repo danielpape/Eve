@@ -119,6 +119,7 @@
 - (IBAction)tapThemeSegmentControl:(id)sender;
 - (IBAction)tapSoundSegmentControl:(id)sender;
 - (IBAction)slideHoursSlider:(id)sender;
+- (IBAction)hoursSliderValueChange:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *hoursLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *menuBackgroundImage;
 
