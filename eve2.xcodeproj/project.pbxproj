@@ -11,6 +11,7 @@
 		371B362B175A5B7300E962AA /* leftarrow2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 371B3629175A5B7300E962AA /* leftarrow2@2x.png */; };
 		371B362C175A5B7300E962AA /* rightarrow2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 371B362A175A5B7300E962AA /* rightarrow2@2x.png */; };
 		371C3C411E2E08B70076C239 /* menuBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 371C3C401E2E08B70076C239 /* menuBackground@2x.png */; };
+		371C3C431E3139910076C239 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 371C3C421E3139910076C239 /* GoogleService-Info.plist */; };
 		371CA90F1812FD9600839AE4 /* morningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 371CA90E1812FD9600839AE4 /* morningViewController.m */; };
 		3724F5781877818D0049CBDA /* SKProduct+priceAsString.m in Sources */ = {isa = PBXBuildFile; fileRef = 3724F5771877818D0049CBDA /* SKProduct+priceAsString.m */; };
 		37357CB2185FBC4C00CF452E /* background5.png in Resources */ = {isa = PBXBuildFile; fileRef = 37357CAE185FBC4C00CF452E /* background5.png */; };
@@ -50,6 +51,7 @@
 		37BD09BA17693CD500941613 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37BD09B917693CD500941613 /* CoreText.framework */; };
 		37BD09BC17693CEB00941613 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37BD09BB17693CEB00941613 /* SystemConfiguration.framework */; };
 		37C38B1E182E76FA00141AF5 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C38B1D182E76FA00141AF5 /* StoreKit.framework */; };
+		37C4E8D71E32CF870071C816 /* introViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C4E8D61E32CF870071C816 /* introViewController.m */; };
 		37CC762A1861E42500D6EB22 /* menuBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 37CC76281861E42500D6EB22 /* menuBack.png */; };
 		37CC762B1861E42500D6EB22 /* menuBack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37CC76291861E42500D6EB22 /* menuBack@2x.png */; };
 		37CC762E1861E5AE00D6EB22 /* KnobCentre.png in Resources */ = {isa = PBXBuildFile; fileRef = 37CC762C1861E5AE00D6EB22 /* KnobCentre.png */; };
@@ -96,6 +98,7 @@
 		371B3629175A5B7300E962AA /* leftarrow2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "leftarrow2@2x.png"; path = "eve2/leftarrow2@2x.png"; sourceTree = "<group>"; };
 		371B362A175A5B7300E962AA /* rightarrow2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "rightarrow2@2x.png"; path = "eve2/rightarrow2@2x.png"; sourceTree = "<group>"; };
 		371C3C401E2E08B70076C239 /* menuBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menuBackground@2x.png"; sourceTree = "<group>"; };
+		371C3C421E3139910076C239 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		371CA90D1812FD9600839AE4 /* morningViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = morningViewController.h; sourceTree = "<group>"; };
 		371CA90E1812FD9600839AE4 /* morningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = morningViewController.m; sourceTree = "<group>"; };
 		3724F5761877818D0049CBDA /* SKProduct+priceAsString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKProduct+priceAsString.h"; sourceTree = "<group>"; };
@@ -141,6 +144,8 @@
 		37BD09B917693CD500941613 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		37BD09BB17693CEB00941613 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		37C38B1D182E76FA00141AF5 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		37C4E8D51E32CF870071C816 /* introViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = introViewController.h; sourceTree = "<group>"; };
+		37C4E8D61E32CF870071C816 /* introViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = introViewController.m; sourceTree = "<group>"; };
 		37CC76281861E42500D6EB22 /* menuBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuBack.png; sourceTree = "<group>"; };
 		37CC76291861E42500D6EB22 /* menuBack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menuBack@2x.png"; sourceTree = "<group>"; };
 		37CC762C1861E5AE00D6EB22 /* KnobCentre.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KnobCentre.png; sourceTree = "<group>"; };
@@ -186,6 +191,8 @@
 		37F90B141778D54800E48FB3 /* eveAlarm4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = eveAlarm4.wav; sourceTree = "<group>"; };
 		37F90B161778D56B00E48FB3 /* KnobOverlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KnobOverlay@2x.png"; sourceTree = "<group>"; };
 		37F90B181778D57400E48FB3 /* background1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background1@2x.png"; sourceTree = "<group>"; };
+		644ADB8BB7AD802DA2AC2751 /* Pods-eve2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eve2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eve2/Pods-eve2.debug.xcconfig"; sourceTree = "<group>"; };
+		BCC1821B0E1C28BF78C43458 /* Pods-eve2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eve2.release.xcconfig"; path = "Pods/Target Support Files/Pods-eve2/Pods-eve2.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +220,7 @@
 		37F1B2921737FDDD00DFEBCB = {
 			isa = PBXGroup;
 			children = (
+				371C3C421E3139910076C239 /* GoogleService-Info.plist */,
 				37BD09BB17693CEB00941613 /* SystemConfiguration.framework */,
 				37BD09B917693CD500941613 /* CoreText.framework */,
 				37880DE51764BD9E00C7F3F5 /* AVFoundation.framework */,
@@ -237,6 +245,7 @@
 				37CC7639186257C200D6EB22 /* IAPimage@2x.png */,
 				37CC763C18625A9000D6EB22 /* IAPbg1.png */,
 				37CC763D18625A9000D6EB22 /* IAPbg1@2x.png */,
+				FAFE9EA6396E10AF4BECF787 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -280,6 +289,8 @@
 				37F1B2BA1737FDDD00DFEBCB /* eveViewController.m */,
 				37F1B2A51737FDDD00DFEBCB /* Supporting Files */,
 				3706670B1E241D6F000BFB4E /* Launch Screen.storyboard */,
+				37C4E8D51E32CF870071C816 /* introViewController.h */,
+				37C4E8D61E32CF870071C816 /* introViewController.m */,
 			);
 			path = eve2;
 			sourceTree = "<group>";
@@ -348,6 +359,15 @@
 				37CC76291861E42500D6EB22 /* menuBack@2x.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		FAFE9EA6396E10AF4BECF787 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				644ADB8BB7AD802DA2AC2751 /* Pods-eve2.debug.xcconfig */,
+				BCC1821B0E1C28BF78C43458 /* Pods-eve2.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -460,6 +480,7 @@
 				37CC762B1861E42500D6EB22 /* menuBack@2x.png in Resources */,
 				37ACF5ED17F72F6F001D4225 /* menuBackBlack@2x.png in Resources */,
 				37F90B151778D54800E48FB3 /* eveAlarm4.wav in Resources */,
+				371C3C431E3139910076C239 /* GoogleService-Info.plist in Resources */,
 				37DEEAFD1830269C006765AB /* sunsetIconBlack.png in Resources */,
 				37357CB4185FBC4C00CF452E /* background6.png in Resources */,
 				37F90B171778D56B00E48FB3 /* KnobOverlay@2x.png in Resources */,
@@ -485,6 +506,7 @@
 				371CA90F1812FD9600839AE4 /* morningViewController.m in Sources */,
 				3724F5781877818D0049CBDA /* SKProduct+priceAsString.m in Sources */,
 				37F1B2AB1737FDDD00DFEBCB /* main.m in Sources */,
+				37C4E8D71E32CF870071C816 /* introViewController.m in Sources */,
 				37F1B2AF1737FDDD00DFEBCB /* eveAppDelegate.m in Sources */,
 				37F1B2BB1737FDDD00DFEBCB /* eveViewController.m in Sources */,
 				3797F6C617EF17C60016D779 /* setViewController.m in Sources */,

@@ -17,6 +17,7 @@
 #import <Accounts/Accounts.h>
 #import <StoreKit/StoreKit.h>
 #import "SKProduct+priceAsString.h"
+#import <QuartzCore/QuartzCore.h>
 
 #define kInAppPurchaseManagerProductsFetchedNotification @"kInAppPurchaseManagerProductsFetchedNotification"
 #define kInAppPurchaseManagerTransactionSucceededNotification @"kInAppPurchaseManagerTransactionSucceededNotification"
@@ -76,7 +77,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *eveWillWakeLabel;
 @property (weak, nonatomic) IBOutlet UIButton *soundButton;
 @property (strong, nonatomic) AVAudioPlayer *audioPlayer;
-@property (weak, nonatomic) IBOutlet UIButton *introScreen;
 @property (weak, nonatomic) IBOutlet UIView *daysView;
 @property (weak, nonatomic) IBOutlet UIButton *daysReturnButton;
 @property (weak, nonatomic) IBOutlet UIButton *mondayButton;
@@ -121,6 +121,7 @@
 - (IBAction)hoursSliderValueChange:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *hoursLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *menuBackgroundImage;
+@property (weak, nonatomic) IBOutlet UIView *introContainer;
 
 - (IBAction)tapResetAlarmButton:(id)sender;
 -(IBAction)touchUpInKnob;

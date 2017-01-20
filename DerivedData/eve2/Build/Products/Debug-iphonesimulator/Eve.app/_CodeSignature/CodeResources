@@ -16,6 +16,10 @@
 		<data>
 		XRGnW/y2H24rYaxoOjH8G4UORM8=
 		</data>
+		<key>GoogleService-Info.plist</key>
+		<data>
+		ibvHNUbDSWOVzeg3gK/wAQWFVl8=
+		</data>
 		<key>IAPbg1.png</key>
 		<data>
 		JhID+s34r4QUdpHLzitJV/16n8M=
@@ -58,7 +62,7 @@
 		</data>
 		<key>Launch Screen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		+0sSaE0boti96SjBBy3LoWKFNvU=
+		pwBb028Pp4ACvTzsrbDW/94ww8g=
 		</data>
 		<key>Launch Screen.storyboardc/Info.plist</key>
 		<data>
@@ -66,7 +70,7 @@
 		</data>
 		<key>Launch Screen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		KjYeagG2UciaR3oYM0Gu7I4uWeQ=
+		mXAMtq9iIRb08v33sAX2eMKkJG4=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -161,7 +165,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			2H/ScEaevpKml7YgG86BkMMzFpI=
+			3lwCFwoIVaLTCyBaDt6mMKELCis=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -170,7 +174,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			gxnjWd8Mo5qddDfU5pMyYPVAIOw=
+			hEWQFuL3/M/gtd92X/Rd42364s4=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -179,7 +183,16 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			AGDMk3e6ZXlSaLxig99r+hA6Kgw=
+			3k8A0wDhFyqI4SeKGetE1dQsFlg=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>en.lproj/MainStoryboard.storyboardc/UIViewController-i74-A1-WII.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			7+Krbve9pP0QGiFyX9Vpxg6OF98=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -188,16 +201,16 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			+wGrfRhMzZmf4wnoXP2n3z0q3pk=
+			2xZQ3cREKJSQd/gZgEHaIevsyV4=
 			</data>
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>en.lproj/MainStoryboard.storyboardc/morningView.nib</key>
+		<key>en.lproj/MainStoryboard.storyboardc/i74-A1-WII-view-mmV-Zp-YHx.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ff/qVSCgoTEMWh+o7EAr/mjk9IU=
+			IGnaAFCdCanuJkTRzvacT3TCg2E=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -206,16 +219,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			PqPlSogPLqjo8MSWO2oCyzdH6p8=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>en.lproj/MainStoryboard.storyboardc/uxb-50-EgP-view-eD0-Lz-pX1.nib</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			FS/GfPLRpqYLowRoBz+JcrIc5Vo=
+			b9dQKY6ADhr2Q8G4I4vr1r223xQ=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -376,6 +380,17 @@
 			teoV+YWzvGX8QCvoDQaACVTLnV0rT+SXN8aTFso9ueg=
 			</data>
 		</dict>
+		<key>GoogleService-Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ibvHNUbDSWOVzeg3gK/wAQWFVl8=
+			</data>
+			<key>hash2</key>
+			<data>
+			TEvPdrWgWy9HIBkgHCj9aNhOeYy/XoJ78fUPN1op+3M=
+			</data>
+		</dict>
 		<key>IAPbg1.png</key>
 		<dict>
 			<key>hash</key>
@@ -479,11 +494,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			+0sSaE0boti96SjBBy3LoWKFNvU=
+			pwBb028Pp4ACvTzsrbDW/94ww8g=
 			</data>
 			<key>hash2</key>
 			<data>
-			nfbsEDrUY+z5xsx9UKhBsO5N1D22YyfLMNkt+l+yyxk=
+			WG6SVOZbOiy9Wk0uPlq/NVw6QZIjRt2l0Wp5GQgdGgY=
 			</data>
 		</dict>
 		<key>Launch Screen.storyboardc/Info.plist</key>
@@ -501,11 +516,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			KjYeagG2UciaR3oYM0Gu7I4uWeQ=
+			mXAMtq9iIRb08v33sAX2eMKkJG4=
 			</data>
 			<key>hash2</key>
 			<data>
-			7yTTDxcvi53ddeuYkKRX1e/NCzg/UHwO7D+WvbKO15E=
+			N3C2ppyOzm+noTbdQN32V03/bHMZtsoIt2Ay3aZzLdE=
 			</data>
 		</dict>
 		<key>aboutBox.png</key>
@@ -734,11 +749,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			2H/ScEaevpKml7YgG86BkMMzFpI=
+			3lwCFwoIVaLTCyBaDt6mMKELCis=
 			</data>
 			<key>hash2</key>
 			<data>
-			dmj5gwuVg3tv+AeNt0fRRczRpdQ6INWnJCMMtdd63Zk=
+			CfAWB7f/Yc+j13W17fDXujWGAA6vre1RZfRgnhb4C5c=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -747,11 +762,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			gxnjWd8Mo5qddDfU5pMyYPVAIOw=
+			hEWQFuL3/M/gtd92X/Rd42364s4=
 			</data>
 			<key>hash2</key>
 			<data>
-			BzwgVXxSivLyO4Urtw2GFkyizE7CNb0uYhrL7X18DM8=
+			BVQY3DhubmSOgJL2BhB0XagvqGkQHWVDHHCUrRzK3Ds=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -760,11 +775,24 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			AGDMk3e6ZXlSaLxig99r+hA6Kgw=
+			3k8A0wDhFyqI4SeKGetE1dQsFlg=
 			</data>
 			<key>hash2</key>
 			<data>
-			wQ46WLf/UM+8Mkvwv5sKDgvJ7waLFpAeXIQ28MCFrVY=
+			17auAU793H91D5zxZ1t5pRzYKZjg1a8mF4mgDfrts0U=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>en.lproj/MainStoryboard.storyboardc/UIViewController-i74-A1-WII.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			7+Krbve9pP0QGiFyX9Vpxg6OF98=
+			</data>
+			<key>hash2</key>
+			<data>
+			NAb6jDYhLqqS5TiQe5/HSZn6FEd1e7gGSJ7TkBqJqWk=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -773,24 +801,24 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			+wGrfRhMzZmf4wnoXP2n3z0q3pk=
+			2xZQ3cREKJSQd/gZgEHaIevsyV4=
 			</data>
 			<key>hash2</key>
 			<data>
-			xzaGQdMmkbBrv6rq8ulIW6ejNJYDWi/Kci1rFZpOKBY=
+			2Di5HDuELZ28cG1uh6ikDoSPZi/HyPvV+ujOm61QSYE=
 			</data>
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>en.lproj/MainStoryboard.storyboardc/morningView.nib</key>
+		<key>en.lproj/MainStoryboard.storyboardc/i74-A1-WII-view-mmV-Zp-YHx.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ff/qVSCgoTEMWh+o7EAr/mjk9IU=
+			IGnaAFCdCanuJkTRzvacT3TCg2E=
 			</data>
 			<key>hash2</key>
 			<data>
-			d43QCGh8x4326LniJ9AXu3ApvnvJ9I+N1sYWcXkl/a4=
+			x3HQq0L2M7N9Q4yQubo0cdjqXe2IfLQs1pK6WmQQXBw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -799,24 +827,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			PqPlSogPLqjo8MSWO2oCyzdH6p8=
+			b9dQKY6ADhr2Q8G4I4vr1r223xQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			Dn/KYLAxKkmHKRLRfZqoHepIJfzD0792A7OIdGWepck=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>en.lproj/MainStoryboard.storyboardc/uxb-50-EgP-view-eD0-Lz-pX1.nib</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			FS/GfPLRpqYLowRoBz+JcrIc5Vo=
-			</data>
-			<key>hash2</key>
-			<data>
-			I+NkZpRNEcksCsCNTuT4hboVhfx6sdTdnPhwzsBa7jo=
+			9LTjxOnxdwit3OccOwhoGCEueRAuR6VE0qNTD+BVyHs=
 			</data>
 			<key>optional</key>
 			<true/>

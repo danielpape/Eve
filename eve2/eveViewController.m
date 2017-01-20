@@ -33,6 +33,11 @@ NSArray *validProducts;
     hourOfSleep = 8;
     isPlaying = NO;
     
+    _introView.layer.cornerRadius = 16;
+    _introView.layer.masksToBounds = YES;
+
+    self.rotaryKnob.alpha = 0;
+    self.setAlarmButton.alpha = 0;
     
     defaults = [[NSUserDefaults alloc]init];
     
@@ -84,11 +89,14 @@ NSArray *validProducts;
     float minutesPercentage = (minutesPastHour/60) *100;
     
     float Hm = (hoursInt*100)+minutesPercentage;
-    
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0];
+
     CGPoint initcenter = [_skyBack center];
     initcenter.x = self.view.bounds.size.width/2;
     initcenter.y = Hm - 400;
     [_skyBack setCenter:initcenter];
+    [UIView commitAnimations];
     
     if ([[defaults objectForKey:@"background"]  isEqual: @"background1.png"]){
         self.backgroundLabel.text = @"Summer";

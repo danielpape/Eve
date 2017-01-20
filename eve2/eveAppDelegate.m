@@ -26,12 +26,7 @@
         self.window.rootViewController = controller;
        // UIStoryboard *setView = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
        // initialViewController = [setView instantiateInitialViewController];
-    }
-    
-    //self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    //self.window.rootViewController  = initialViewController;
-    //[self.window makeKeyAndVisible];
-     
+    }     
      
         return YES;
 }
