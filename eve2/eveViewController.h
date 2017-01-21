@@ -86,7 +86,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *fridayButton;
 @property (weak, nonatomic) IBOutlet UIButton *saturdayButton;
 @property (weak, nonatomic) IBOutlet UIButton *sundayButton;
-@property (weak, nonatomic) IBOutlet UIView *introView;
 @property (weak, nonatomic) IBOutlet UIButton *beginButton;
 @property (weak, nonatomic) IBOutlet UIImageView *menuBackground;
 @property (weak, nonatomic) IBOutlet UILabel *mondayLetter;
@@ -121,7 +120,8 @@
 - (IBAction)hoursSliderValueChange:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *hoursLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *menuBackgroundImage;
-@property (weak, nonatomic) IBOutlet UIView *introContainer;
+@property (weak, nonatomic) IBOutlet UIView *introView;
+
 
 - (IBAction)tapResetAlarmButton:(id)sender;
 -(IBAction)touchUpInKnob;
@@ -151,6 +151,8 @@
 - (IBAction) pressSundayButton;
 - (IBAction) pressDaysContinueButton;
 - (IBAction)pressSettingsContinueButton:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *tapIntroDismissButton;
+- (IBAction)tapIntroDismissButton:(id)sender;
 
 - (void) setMondayAlarm;
 - (void) setTuesdayAlarm;

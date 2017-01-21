@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "eveViewController.h"
 
 @interface introViewController : UIViewController
+
+@property (weak, nonatomic) eveViewController *eVC;
+
 - (IBAction)tapDismissButton:(id)sender;
 
 @end

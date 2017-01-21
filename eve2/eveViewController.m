@@ -886,6 +886,15 @@ NSArray *validProducts;
     [UIView commitAnimations];
 }
 
+- (IBAction)tapIntroDismissButton:(id)sender {
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.3];
+    self.introView.alpha = 0;
+    self.rotaryKnob.alpha = 0.4;
+    self.setAlarmButton.alpha = 1;
+    [UIView commitAnimations];
+}
+
 - (void) setMondayAlarm{
     NSDate *alarmTime = [[NSDate date] dateByAddingTimeInterval: self.rotaryKnob.value*800];
     NSLog(@"alarm time is %@",alarmTime );

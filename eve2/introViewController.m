@@ -7,7 +7,7 @@
 //
 
 #import "introViewController.h"
-#import "eveViewController.h"
+#import "MHRotaryKnob.h"
 
 
 @interface introViewController ()
@@ -38,11 +38,11 @@
 
 - (IBAction)tapDismissButton:(id)sender {
     
-    eveViewController *eVC = [[eveViewController alloc]init];
-    
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:0.3];
     self.view.alpha = 0;
+    _eVC.rotaryKnob.alpha = 1;
+    _eVC.setAlarmButton.alpha = 1;
     [UIView commitAnimations];
     
 }
