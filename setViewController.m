@@ -34,6 +34,10 @@
     self.setTimeLabel.text = [NSString stringWithFormat:@"%@",savedHour];
     
     self.resetAlarmButton.layer.cornerRadius = 7.5f;
+    self.resetAlarmButton.layer.shadowRadius = 2.0f;
+    self.resetAlarmButton.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.resetAlarmButton.layer.shadowOpacity = 0.2f;
+    self.resetAlarmButton.layer.shadowOffset = CGSizeMake(0, 2);
     
     if([defaults boolForKey:@"mondayAlarm"]) {
         self.mLabel.alpha = 1;

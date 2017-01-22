@@ -33,6 +33,11 @@ NSArray *validProducts;
     hourOfSleep = 8;
     isPlaying = NO;
     
+    self.resetAlarmButton.layer.shadowRadius = 2.0f;
+    self.resetAlarmButton.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.resetAlarmButton.layer.shadowOpacity = 0.2f;
+    self.resetAlarmButton.layer.shadowOffset = CGSizeMake(0, 2);
+    
     defaults = [[NSUserDefaults alloc]init];
     
     if ([defaults objectForKey:@"background"] != nil) {
