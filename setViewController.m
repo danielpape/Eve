@@ -33,6 +33,8 @@
     NSString *savedHour = [defaults stringForKey:@"wakeString"];
     self.setTimeLabel.text = [NSString stringWithFormat:@"%@",savedHour];
     
+    self.resetAlarmButton.layer.cornerRadius = 7.5f;
+    
     if([defaults boolForKey:@"mondayAlarm"]) {
         self.mLabel.alpha = 1;
     }else{

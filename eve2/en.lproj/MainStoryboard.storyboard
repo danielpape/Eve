@@ -10,6 +10,17 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Nunito-ExtraLight.ttf">
+            <string>Nunito-ExtraLight</string>
+        </array>
+        <array key="Nunito-Light.ttf">
+            <string>Nunito-Light</string>
+        </array>
+        <array key="Nunito-Regular.ttf">
+            <string>Nunito-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Animals View Controller-->
         <scene sceneID="eH0-9W-GCu">
@@ -22,12 +33,12 @@
                     <view key="view" contentMode="scaleToFill" id="iyW-Eg-Jep">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.18031477930000001" green="0.18031477930000001" blue="0.18031477930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dqr-fZ-MIA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-543" y="41"/>
+            <point key="canvasLocation" x="-543.5" y="40.5"/>
         </scene>
         <!--Eve View Controller-->
         <scene sceneID="5">
@@ -58,18 +69,20 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="k1B-Hw-Dfa"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="Nunito-Light" family="Nunito" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBu-sv-1c0">
-                                <rect key="frame" x="0.0" y="619" width="375" height="48"/>
+                                <rect key="frame" x="16" y="603" width="343" height="48"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="FPq-p9-yoS"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <state key="normal" title="Reset Alarm"/>
+                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="24"/>
+                                <state key="normal" title="Reset Alarm">
+                                    <color key="titleColor" red="0.18031477930000001" green="0.18031477930000001" blue="0.18031477930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="tapResetAlarmButton:" destination="2" eventType="touchUpInside" id="EiB-we-sh0"/>
                                 </connections>
@@ -86,12 +99,12 @@
                                     <action selector="touchUpInKnob" destination="2" eventType="touchUpInside" id="jtm-jT-vIF"/>
                                 </connections>
                             </view>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bR7-JK-FJG">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="XX.XX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bR7-JK-FJG">
                                 <rect key="frame" x="0.0" y="56" width="375" height="95"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="95" id="u06-nW-DxL"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="40"/>
+                                <fontDescription key="fontDescription" name="Nunito-ExtraLight" family="Nunito" pointSize="40"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -100,12 +113,15 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="Be5-C6-VYs"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="Nunito-Light" family="Nunito" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuBackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="mhy-ZE-TnF">
-                                <rect key="frame" x="-4" y="503" width="383" height="164"/>
+                                <rect key="frame" x="-4" y="514" width="383" height="153"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mhy-ZE-TnF" secondAttribute="height" multiplier="383:153" id="ToZ-Vv-7yH"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Web-Ay-8ro">
                                 <rect key="frame" x="118" y="449" width="140" height="140"/>
@@ -127,7 +143,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="XqD-Zg-dBI"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Light" family="Nunito" pointSize="24"/>
                                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Monday">
                                             <color key="titleColor" red="0.82352941180000006" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -147,7 +163,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="SJz-Ss-NbY"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Light" family="Nunito" pointSize="24"/>
                                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Tuesday">
                                             <color key="titleColor" red="0.82352941180000006" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -167,7 +183,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="V6V-UM-De2"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Light" family="Nunito" pointSize="24"/>
                                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Wednesday">
                                             <color key="titleColor" red="0.82352941180000006" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -187,7 +203,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="PVc-to-bRY"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Light" family="Nunito" pointSize="24"/>
                                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Thursday">
                                             <color key="titleColor" red="0.82352941180000006" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -202,12 +218,12 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPL-fb-7FU">
-                                        <rect key="frame" x="0.0" y="196" width="375" height="48"/>
+                                        <rect key="frame" x="0.0" y="196" width="383" height="48"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="MbM-11-XpI"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Light" family="Nunito" pointSize="24"/>
                                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Friday">
                                             <color key="titleColor" red="0.82352941180000006" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -222,9 +238,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xbs-5S-Xnj">
-                                        <rect key="frame" x="0.0" y="240" width="375" height="48"/>
+                                        <rect key="frame" x="0.0" y="240" width="383" height="48"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Light" family="Nunito" pointSize="24"/>
                                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Saturday">
                                             <color key="titleColor" red="0.82352941180000006" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -239,12 +255,12 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rlP-6j-oR8">
-                                        <rect key="frame" x="0.0" y="288" width="375" height="48"/>
+                                        <rect key="frame" x="0.0" y="288" width="383" height="48"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="bmw-nS-C6P"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Light" family="Nunito" pointSize="24"/>
                                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Sunday">
                                             <color key="titleColor" red="0.82352941180000006" green="0.0" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -259,12 +275,12 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Evr-25-DR7">
-                                        <rect key="frame" x="0.0" y="336" width="375" height="48"/>
+                                        <rect key="frame" x="16" y="336" width="351" height="48"/>
                                         <color key="backgroundColor" red="0.14000000059604645" green="0.14000000059604645" blue="0.14000000059604645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="adq-Yr-qy5"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Light" family="Nunito" pointSize="24"/>
                                         <state key="normal" title="Confirm Days">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -278,7 +294,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="ogQ-u9-za7"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Light" family="Nunito" pointSize="24"/>
                                         <state key="normal" title="Return">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -292,23 +308,25 @@
                                 <constraints>
                                     <constraint firstItem="FS7-6o-6e4" firstAttribute="trailing" secondItem="vCz-k0-nLA" secondAttribute="trailing" id="0vb-et-TNV"/>
                                     <constraint firstItem="FS7-6o-6e4" firstAttribute="leading" secondItem="vCz-k0-nLA" secondAttribute="leading" id="29r-iF-qVU"/>
-                                    <constraint firstItem="Evr-25-DR7" firstAttribute="leading" secondItem="rlP-6j-oR8" secondAttribute="leading" id="2Hg-Ut-uct"/>
                                     <constraint firstItem="ti5-AF-8Vl" firstAttribute="trailing" secondItem="Hlh-Fc-HvX" secondAttribute="trailing" id="2eQ-yx-Xie"/>
+                                    <constraint firstItem="Evr-25-DR7" firstAttribute="leading" secondItem="Fg0-AW-bIs" secondAttribute="leading" constant="16" id="3hN-0L-axH"/>
+                                    <constraint firstItem="gPL-fb-7FU" firstAttribute="leading" secondItem="Fg0-AW-bIs" secondAttribute="leading" id="4fb-5e-fUL"/>
                                     <constraint firstAttribute="height" constant="568" id="5h6-hP-r8W"/>
                                     <constraint firstItem="ti5-AF-8Vl" firstAttribute="leading" secondItem="Hlh-Fc-HvX" secondAttribute="leading" id="5qL-Jy-QH6"/>
                                     <constraint firstItem="xbs-5S-Xnj" firstAttribute="trailing" secondItem="gPL-fb-7FU" secondAttribute="trailing" id="8oC-Yi-lOo"/>
                                     <constraint firstAttribute="bottom" secondItem="rlP-6j-oR8" secondAttribute="bottom" constant="232" id="9n6-tH-rIX"/>
+                                    <constraint firstItem="Evr-25-DR7" firstAttribute="top" secondItem="rlP-6j-oR8" secondAttribute="bottom" id="9q5-FT-lR9"/>
                                     <constraint firstItem="xbs-5S-Xnj" firstAttribute="leading" secondItem="gPL-fb-7FU" secondAttribute="leading" id="H4B-II-Xqr"/>
                                     <constraint firstItem="zT0-vL-319" firstAttribute="trailing" secondItem="Fg0-AW-bIs" secondAttribute="trailingMargin" id="Hlf-PK-kmU"/>
-                                    <constraint firstItem="Evr-25-DR7" firstAttribute="top" secondItem="rlP-6j-oR8" secondAttribute="bottom" id="Ibj-L7-TOU"/>
-                                    <constraint firstItem="FS7-6o-6e4" firstAttribute="trailing" secondItem="Evr-25-DR7" secondAttribute="trailing" id="KS0-Dk-ebN"/>
                                     <constraint firstItem="vCz-k0-nLA" firstAttribute="top" secondItem="ti5-AF-8Vl" secondAttribute="bottom" id="Lpl-Jy-v3u"/>
-                                    <constraint firstItem="Evr-25-DR7" firstAttribute="trailing" secondItem="rlP-6j-oR8" secondAttribute="trailing" id="TXk-1P-Cf4"/>
+                                    <constraint firstItem="Evr-25-DR7" firstAttribute="top" secondItem="rlP-6j-oR8" secondAttribute="bottom" id="TMP-N7-dMT"/>
                                     <constraint firstItem="Hlh-Fc-HvX" firstAttribute="top" secondItem="zT0-vL-319" secondAttribute="bottom" id="UVl-Sq-Ymo"/>
                                     <constraint firstItem="vCz-k0-nLA" firstAttribute="leading" secondItem="ti5-AF-8Vl" secondAttribute="leading" id="UZ4-qw-Zlv"/>
                                     <constraint firstItem="rlP-6j-oR8" firstAttribute="leading" secondItem="xbs-5S-Xnj" secondAttribute="leading" id="bCG-sd-5O1"/>
                                     <constraint firstItem="FS7-6o-6e4" firstAttribute="top" secondItem="Evr-25-DR7" secondAttribute="bottom" id="bPb-Mh-4qM"/>
                                     <constraint firstItem="vCz-k0-nLA" firstAttribute="trailing" secondItem="ti5-AF-8Vl" secondAttribute="trailing" id="fEF-vO-qO5"/>
+                                    <constraint firstAttribute="trailing" secondItem="Evr-25-DR7" secondAttribute="trailing" constant="16" id="gv5-y5-xpM"/>
+                                    <constraint firstAttribute="trailing" secondItem="gPL-fb-7FU" secondAttribute="trailing" id="hG6-Mj-OD2"/>
                                     <constraint firstItem="zT0-vL-319" firstAttribute="top" secondItem="Fg0-AW-bIs" secondAttribute="top" id="iVp-r3-ZQa"/>
                                     <constraint firstItem="ti5-AF-8Vl" firstAttribute="top" secondItem="Hlh-Fc-HvX" secondAttribute="bottom" id="jv8-L8-htK"/>
                                     <constraint firstItem="rlP-6j-oR8" firstAttribute="trailing" secondItem="xbs-5S-Xnj" secondAttribute="trailing" id="lln-D1-i1a"/>
@@ -318,18 +336,17 @@
                                     <constraint firstItem="Hlh-Fc-HvX" firstAttribute="leading" secondItem="zT0-vL-319" secondAttribute="leading" id="tCC-w7-hpl"/>
                                     <constraint firstItem="Hlh-Fc-HvX" firstAttribute="trailing" secondItem="zT0-vL-319" secondAttribute="trailing" id="vnh-ik-EEu"/>
                                     <constraint firstItem="xbs-5S-Xnj" firstAttribute="top" secondItem="vCz-k0-nLA" secondAttribute="bottom" constant="48" id="xQV-AN-LbH"/>
-                                    <constraint firstItem="FS7-6o-6e4" firstAttribute="leading" secondItem="Evr-25-DR7" secondAttribute="leading" id="ygZ-ps-Cqb"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RrE-lT-7jN">
                                 <rect key="frame" x="-4" y="750" width="383" height="568"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sky Theme" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j22-W1-xpq">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Theme" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j22-W1-xpq">
                                         <rect key="frame" x="16" y="8" width="351" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="31" id="uwN-C3-euw"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Light" family="Nunito" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -337,19 +354,19 @@
                                         <rect key="frame" x="16" y="42" width="351" height="29"/>
                                         <segments>
                                             <segment title="Summer"/>
-                                            <segment title="Fall"/>
                                             <segment title="Winter"/>
-                                            <segment title="Spring"/>
                                         </segments>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <action selector="tapThemeSegmentControl:" destination="2" eventType="valueChanged" id="XLq-18-YZ0"/>
                                         </connections>
                                     </segmentedControl>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alarm Sound" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5e-8a-FOq">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Alarm Sound" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5e-8a-FOq">
                                         <rect key="frame" x="8" y="85" width="355" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="31" id="o0O-0h-TJK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Nunito-Light" family="Nunito" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -373,7 +390,7 @@
                                             <constraint firstAttribute="height" constant="31" id="UDg-7i-vrz"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="153" id="iTC-Ig-uoY"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Light" family="Nunito" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -383,7 +400,7 @@
                                             <constraint firstAttribute="width" constant="143" id="Q9h-1M-WIN"/>
                                             <constraint firstAttribute="height" constant="31" id="TrC-6T-Nby"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Light" family="Nunito" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -395,12 +412,12 @@
                                         </connections>
                                     </slider>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nWD-75-gCe">
-                                        <rect key="frame" x="0.0" y="252" width="383" height="48"/>
+                                        <rect key="frame" x="16" y="252" width="351" height="48"/>
                                         <color key="backgroundColor" red="0.14000000060000001" green="0.14000000060000001" blue="0.14000000060000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="ACN-jc-xXo"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Light" family="Nunito" pointSize="24"/>
                                         <state key="normal" title="Confirm">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -414,7 +431,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="yLT-Ho-6el"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Light" family="Nunito" pointSize="24"/>
                                         <state key="normal" title="Return">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -424,7 +441,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.18031477930000001" green="0.18031477930000001" blue="0.18031477930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.1803921568627451" green="0.1803921568627451" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="hmy-KE-TgD" secondAttribute="trailing" constant="16" id="1no-lh-4Yw"/>
                                     <constraint firstItem="8uT-aJ-pJw" firstAttribute="top" secondItem="RrE-lT-7jN" secondAttribute="top" constant="164" id="2QB-gf-1nG"/>
@@ -432,21 +449,24 @@
                                     <constraint firstAttribute="trailing" secondItem="j22-W1-xpq" secondAttribute="trailing" constant="16" id="8iR-UX-eE8"/>
                                     <constraint firstItem="5AR-l9-sGN" firstAttribute="leading" secondItem="RrE-lT-7jN" secondAttribute="leading" constant="16" id="ACV-J4-bXQ"/>
                                     <constraint firstItem="j22-W1-xpq" firstAttribute="leading" secondItem="RrE-lT-7jN" secondAttribute="leading" constant="16" id="Bgi-9F-UB7"/>
-                                    <constraint firstAttribute="trailing" secondItem="nWD-75-gCe" secondAttribute="trailing" id="ICM-wM-4SK"/>
+                                    <constraint firstItem="q5e-8a-FOq" firstAttribute="top" secondItem="RrE-lT-7jN" secondAttribute="top" constant="85" id="CDL-mC-R52"/>
+                                    <constraint firstAttribute="trailing" secondItem="nWD-75-gCe" secondAttribute="trailing" constant="16" id="ICM-wM-4SK"/>
                                     <constraint firstAttribute="height" constant="568" id="R2A-cR-jbp"/>
                                     <constraint firstItem="hmy-KE-TgD" firstAttribute="top" secondItem="RrE-lT-7jN" secondAttribute="top" constant="203" id="TXJ-c3-9M5"/>
                                     <constraint firstItem="hmy-KE-TgD" firstAttribute="leading" secondItem="RrE-lT-7jN" secondAttribute="leading" constant="16" id="UUf-DX-88v"/>
+                                    <constraint firstItem="q5e-8a-FOq" firstAttribute="leading" secondItem="RrE-lT-7jN" secondAttribute="leading" constant="16" id="bXD-Py-JYe"/>
                                     <constraint firstItem="ICQ-co-9hd" firstAttribute="top" secondItem="RrE-lT-7jN" secondAttribute="top" constant="121" id="co2-0F-EFG"/>
                                     <constraint firstItem="nWD-75-gCe" firstAttribute="top" secondItem="RrE-lT-7jN" secondAttribute="top" constant="252" id="dN0-8S-UCT"/>
                                     <constraint firstItem="5AR-l9-sGN" firstAttribute="top" secondItem="RrE-lT-7jN" secondAttribute="top" constant="42" id="h7y-LO-uN6"/>
                                     <constraint firstItem="8uT-aJ-pJw" firstAttribute="leading" secondItem="RrE-lT-7jN" secondAttribute="leading" constant="16" id="kEr-Cg-9eI"/>
                                     <constraint firstAttribute="trailing" secondItem="5AR-l9-sGN" secondAttribute="trailing" constant="16" id="l5A-Wl-Db0"/>
+                                    <constraint firstAttribute="trailing" secondItem="q5e-8a-FOq" secondAttribute="trailing" constant="20" id="mJJ-uf-qwo"/>
                                     <constraint firstItem="SFN-le-4ep" firstAttribute="leading" secondItem="RrE-lT-7jN" secondAttribute="leading" id="mcs-fP-Udq"/>
                                     <constraint firstAttribute="trailing" secondItem="SFN-le-4ep" secondAttribute="trailing" id="on8-Jv-tdI"/>
                                     <constraint firstItem="aGH-iT-zhp" firstAttribute="top" secondItem="RrE-lT-7jN" secondAttribute="top" constant="164" id="qYq-9W-A3y"/>
                                     <constraint firstItem="ICQ-co-9hd" firstAttribute="leading" secondItem="RrE-lT-7jN" secondAttribute="leading" constant="16" id="r8r-D3-LZp"/>
                                     <constraint firstItem="SFN-le-4ep" firstAttribute="top" secondItem="nWD-75-gCe" secondAttribute="bottom" constant="-1" id="s9y-mx-HtH"/>
-                                    <constraint firstItem="nWD-75-gCe" firstAttribute="leading" secondItem="RrE-lT-7jN" secondAttribute="leading" id="vgO-2V-gkE"/>
+                                    <constraint firstItem="nWD-75-gCe" firstAttribute="leading" secondItem="RrE-lT-7jN" secondAttribute="leading" constant="16" id="vgO-2V-gkE"/>
                                     <constraint firstItem="j22-W1-xpq" firstAttribute="top" secondItem="RrE-lT-7jN" secondAttribute="top" constant="8" id="wbo-Yh-77t"/>
                                     <constraint firstAttribute="trailing" secondItem="aGH-iT-zhp" secondAttribute="trailing" constant="16" id="ym8-uX-6q2"/>
                                 </constraints>
@@ -457,50 +477,50 @@
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="left" fixedFrame="YES" text="M" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJe-js-Uxy">
                                         <rect key="frame" x="46" y="11" width="25" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="16"/>
-                                        <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="left" fixedFrame="YES" text="T" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="08D-TE-AeJ">
                                         <rect key="frame" x="76" y="10" width="25" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="16"/>
-                                        <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="left" fixedFrame="YES" text="W" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgS-bg-EcL">
                                         <rect key="frame" x="106" y="10" width="25" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="16"/>
-                                        <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="left" fixedFrame="YES" text="T" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLE-Ei-Mll">
                                         <rect key="frame" x="136" y="10" width="25" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="16"/>
-                                        <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="left" fixedFrame="YES" text="F" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erm-ja-vl9">
                                         <rect key="frame" x="166" y="10" width="25" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="16"/>
-                                        <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="left" fixedFrame="YES" text="S" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5uV-WB-vuP">
                                         <rect key="frame" x="196" y="10" width="25" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="16"/>
-                                        <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="left" fixedFrame="YES" text="S" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9d-j4-5TR">
                                         <rect key="frame" x="226" y="10" width="25" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="16"/>
-                                        <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -514,7 +534,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="l0V-DK-1Dj" firstAttribute="top" secondItem="mBu-sv-1c0" secondAttribute="bottom" id="0AJ-MO-2ft"/>
+                            <constraint firstItem="l0V-DK-1Dj" firstAttribute="top" secondItem="mBu-sv-1c0" secondAttribute="bottom" constant="16" id="0AJ-MO-2ft"/>
                             <constraint firstItem="DpU-yL-ewp" firstAttribute="top" secondItem="bR7-JK-FJG" secondAttribute="bottom" constant="-29" id="3EQ-xe-vD4"/>
                             <constraint firstItem="m0Z-FF-UZh" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" id="3Tv-Ut-akm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Fg0-AW-bIs" secondAttribute="trailing" constant="-20" id="4NU-Xd-PVM"/>
@@ -527,21 +547,21 @@
                             <constraint firstItem="l0V-DK-1Dj" firstAttribute="top" secondItem="Web-Ay-8ro" secondAttribute="bottom" constant="78" id="S1p-Sn-qf9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="RrE-lT-7jN" secondAttribute="trailing" constant="-20" id="UnM-uJ-huI"/>
                             <constraint firstItem="W7W-Kk-MHg" firstAttribute="centerX" secondItem="Web-Ay-8ro" secondAttribute="centerX" id="aPk-5E-Prv"/>
-                            <constraint firstItem="mBu-sv-1c0" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" id="cuC-Gi-0HJ"/>
                             <constraint firstItem="W7W-Kk-MHg" firstAttribute="centerY" secondItem="Web-Ay-8ro" secondAttribute="centerY" id="dEo-uI-98c"/>
                             <constraint firstItem="mhy-ZE-TnF" firstAttribute="leading" secondItem="3" secondAttribute="leadingMargin" constant="-20" id="dKe-At-Bs4"/>
                             <constraint firstItem="bR7-JK-FJG" firstAttribute="top" secondItem="m0Z-FF-UZh" secondAttribute="bottom" constant="-22" id="ffG-Qz-CoK"/>
                             <constraint firstItem="Web-Ay-8ro" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" id="g3A-fG-Bdb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mBu-sv-1c0" secondAttribute="trailing" id="giL-rQ-H8F"/>
                             <constraint firstItem="cGO-SN-mHK" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" id="hRc-6i-Vfu"/>
                             <constraint firstItem="l0V-DK-1Dj" firstAttribute="top" secondItem="mhy-ZE-TnF" secondAttribute="bottom" id="haY-dW-nMS"/>
                             <constraint firstItem="Chw-u4-htH" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" id="kq9-ap-GIO"/>
-                            <constraint firstItem="mBu-sv-1c0" firstAttribute="width" secondItem="3" secondAttribute="width" id="nt0-rA-SvY"/>
                             <constraint firstItem="RrE-lT-7jN" firstAttribute="top" secondItem="cKo-kH-sIC" secondAttribute="bottom" constant="750" id="oev-PD-dDy"/>
                             <constraint firstItem="bR7-JK-FJG" firstAttribute="leading" secondItem="3" secondAttribute="leading" id="qQo-iO-HyX"/>
                             <constraint firstItem="Fg0-AW-bIs" firstAttribute="leading" secondItem="3" secondAttribute="leadingMargin" constant="-20" id="qxF-hr-1jw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="m0Z-FF-UZh" secondAttribute="trailing" id="rRu-1r-7KA"/>
                             <constraint firstItem="DpU-yL-ewp" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" id="sYr-dZ-idJ"/>
                             <constraint firstAttribute="leadingMargin" secondItem="m0Z-FF-UZh" secondAttribute="leading" id="vFO-Rh-I9Z"/>
+                            <constraint firstItem="mBu-sv-1c0" firstAttribute="leading" secondItem="3" secondAttribute="leadingMargin" id="xBi-MA-E17"/>
                             <constraint firstItem="bR7-JK-FJG" firstAttribute="top" secondItem="cKo-kH-sIC" secondAttribute="bottom" constant="56" id="xKS-Q9-e7K"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mhy-ZE-TnF" secondAttribute="trailing" constant="-20" id="yrH-8d-O8d"/>
                         </constraints>
@@ -550,6 +570,7 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="daysConfirmButton" destination="Evr-25-DR7" id="WQS-Vl-7Bw"/>
                         <outlet property="daysReturnButton" destination="FS7-6o-6e4" id="NID-al-r6r"/>
                         <outlet property="daysView" destination="Fg0-AW-bIs" id="TFA-gd-lJX"/>
                         <outlet property="dragInstructions" destination="Chw-u4-htH" id="zoy-HY-n3w"/>
@@ -566,6 +587,7 @@
                         <outlet property="saturdayButton" destination="xbs-5S-Xnj" id="wBP-NY-ttB"/>
                         <outlet property="saturdayLetter" destination="5uV-WB-vuP" id="993-HW-KKD"/>
                         <outlet property="setAlarmButton" destination="Web-Ay-8ro" id="02c-xS-65I"/>
+                        <outlet property="settingsConfirmButton" destination="nWD-75-gCe" id="4qM-mt-0Mo"/>
                         <outlet property="settingsView" destination="RrE-lT-7jN" id="DN9-gk-8gw"/>
                         <outlet property="skyBack" destination="rMr-JY-Gmd" id="JwW-Ph-dI8"/>
                         <outlet property="skyBackground" destination="rMr-JY-Gmd" id="67q-4N-ZnF"/>
@@ -603,27 +625,21 @@
                                 <rect key="frame" x="0.0" y="-1510" width="375" height="4119"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Eve will wake you at" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JlX-3r-PeT">
-                                <rect key="frame" x="16" y="33" width="343" height="22"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="16"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="XX.XX AM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4VJ-3O-iLk">
-                                <rect key="frame" x="16" y="63" width="343" height="55"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="40"/>
+                                <rect key="frame" x="16" y="74" width="343" height="55"/>
+                                <fontDescription key="fontDescription" name="Nunito-ExtraLight" family="Nunito" pointSize="40"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PKb-10-wXa">
-                                <rect key="frame" x="0.0" y="613" width="375" height="54"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="16" y="603" width="343" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="54" id="gAH-fS-6Yn"/>
+                                    <constraint firstAttribute="height" constant="48" id="gAH-fS-6Yn"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="32"/>
+                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="24"/>
                                 <state key="normal" title="Reset alarm">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.18031477930000001" green="0.18031477930000001" blue="0.18031477930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <state key="highlighted">
@@ -635,60 +651,60 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="and will remind you X hours before" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gmu-BE-859">
-                                <rect key="frame" x="16" y="114" width="343" height="22"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="16"/>
+                                <rect key="frame" x="16" y="129" width="343" height="22"/>
+                                <fontDescription key="fontDescription" name="Nunito-Light" family="Nunito" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HbN-Qa-acw">
-                                <rect key="frame" x="54" y="155" width="266" height="43"/>
+                                <rect key="frame" x="54" y="175" width="266" height="43"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="M" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sf-pK-oi1">
                                         <rect key="frame" x="22" y="11" width="25" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="16"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="16"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="T" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nYS-Sn-AKt">
                                         <rect key="frame" x="55" y="10" width="25" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="16"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="16"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="W" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xHO-UX-cQg">
                                         <rect key="frame" x="88" y="10" width="25" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="16"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="16"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="T" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogn-oN-N2o">
                                         <rect key="frame" x="121" y="10" width="25" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="16"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="16"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="F" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EfD-pZ-eOs">
                                         <rect key="frame" x="154" y="10" width="25" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="16"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="16"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="S" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwf-Et-mO2">
                                         <rect key="frame" x="187" y="10" width="25" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="16"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="16"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="S" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gco-68-mvh">
                                         <rect key="frame" x="220" y="10" width="25" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="16"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="16"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -698,29 +714,34 @@
                                     <constraint firstAttribute="height" constant="43" id="VKG-YQ-juC"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Eve will wake you at" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JlX-3r-PeT">
+                                <rect key="frame" x="16" y="52" width="343" height="22"/>
+                                <fontDescription key="fontDescription" name="Nunito-Light" family="Nunito" pointSize="16"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="4VJ-3O-iLk" firstAttribute="centerX" secondItem="C9K-5z-CaP" secondAttribute="centerX" id="5wa-L3-Rxz"/>
-                            <constraint firstItem="akt-C7-t0K" firstAttribute="top" secondItem="PKb-10-wXa" secondAttribute="bottom" id="7qs-pW-Tcr"/>
                             <constraint firstItem="HbN-Qa-acw" firstAttribute="centerX" secondItem="C9K-5z-CaP" secondAttribute="centerX" id="9ed-3x-UM6"/>
                             <constraint firstItem="JlX-3r-PeT" firstAttribute="centerX" secondItem="C9K-5z-CaP" secondAttribute="centerX" id="AA7-5y-zl9"/>
-                            <constraint firstItem="4VJ-3O-iLk" firstAttribute="top" secondItem="JlX-3r-PeT" secondAttribute="bottom" constant="8" id="ALJ-ag-F16"/>
+                            <constraint firstItem="4VJ-3O-iLk" firstAttribute="top" secondItem="JlX-3r-PeT" secondAttribute="bottom" id="ALJ-ag-F16"/>
                             <constraint firstItem="HbN-Qa-acw" firstAttribute="leading" secondItem="C9K-5z-CaP" secondAttribute="leadingMargin" constant="38" id="ASg-tu-zgr"/>
-                            <constraint firstItem="HbN-Qa-acw" firstAttribute="top" secondItem="Gmu-BE-859" secondAttribute="bottom" constant="19" id="Bzy-ji-3Hg"/>
-                            <constraint firstItem="Gmu-BE-859" firstAttribute="top" secondItem="4VJ-3O-iLk" secondAttribute="bottom" constant="-4" id="Drz-Au-eiE"/>
+                            <constraint firstItem="HbN-Qa-acw" firstAttribute="top" secondItem="Gmu-BE-859" secondAttribute="bottom" constant="24" id="Bzy-ji-3Hg"/>
+                            <constraint firstItem="Gmu-BE-859" firstAttribute="top" secondItem="4VJ-3O-iLk" secondAttribute="bottom" id="Drz-Au-eiE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="JlX-3r-PeT" secondAttribute="trailing" id="E5O-f3-D5a"/>
                             <constraint firstAttribute="leadingMargin" secondItem="4VJ-3O-iLk" secondAttribute="leading" id="FYD-uc-tIj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="HbN-Qa-acw" secondAttribute="trailing" constant="39" id="HIp-ZR-MRU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Gmu-BE-859" secondAttribute="trailing" id="HyA-th-eX9"/>
-                            <constraint firstItem="JlX-3r-PeT" firstAttribute="top" secondItem="NOF-rk-n0u" secondAttribute="bottom" constant="13" id="KI7-2O-bVN"/>
+                            <constraint firstItem="JlX-3r-PeT" firstAttribute="top" secondItem="NOF-rk-n0u" secondAttribute="bottom" constant="32" id="KI7-2O-bVN"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Gmu-BE-859" secondAttribute="leading" id="KlV-q5-YIQ"/>
                             <constraint firstItem="Gmu-BE-859" firstAttribute="centerX" secondItem="C9K-5z-CaP" secondAttribute="centerX" id="LTu-q3-gMp"/>
                             <constraint firstAttribute="leadingMargin" secondItem="JlX-3r-PeT" secondAttribute="leading" id="U1d-8j-23E"/>
-                            <constraint firstItem="akt-C7-t0K" firstAttribute="top" secondItem="PKb-10-wXa" secondAttribute="bottom" id="blV-0P-LNe"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="PKb-10-wXa" secondAttribute="trailing" constant="-16" id="jNC-a2-KbC"/>
+                            <constraint firstItem="akt-C7-t0K" firstAttribute="top" secondItem="PKb-10-wXa" secondAttribute="bottom" constant="16" id="blV-0P-LNe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PKb-10-wXa" secondAttribute="trailing" id="jNC-a2-KbC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4VJ-3O-iLk" secondAttribute="trailing" id="vVU-nH-2gH"/>
-                            <constraint firstItem="PKb-10-wXa" firstAttribute="leading" secondItem="C9K-5z-CaP" secondAttribute="leadingMargin" constant="-16" id="yLA-pk-Dvz"/>
+                            <constraint firstItem="PKb-10-wXa" firstAttribute="leading" secondItem="C9K-5z-CaP" secondAttribute="leadingMargin" id="yLA-pk-Dvz"/>
                         </constraints>
                     </view>
                     <connections>
@@ -729,6 +750,7 @@
                         <outlet property="fLabel" destination="EfD-pZ-eOs" id="9sy-e6-ZU1"/>
                         <outlet property="hoursLabel" destination="Gmu-BE-859" id="1Ll-lV-wdK"/>
                         <outlet property="mLabel" destination="7sf-pK-oi1" id="3CU-tc-N8V"/>
+                        <outlet property="resetAlarmButton" destination="PKb-10-wXa" id="bPe-NM-3Dm"/>
                         <outlet property="saLabel" destination="dwf-Et-mO2" id="0Z0-r2-Cvg"/>
                         <outlet property="setTimeLabel" destination="4VJ-3O-iLk" id="zoK-hl-kqP"/>
                         <outlet property="skyBack" destination="1Ml-aD-Mjn" id="dRV-5v-oVj"/>
@@ -745,7 +767,7 @@
         <image name="KnobCentre.png" width="140" height="140"/>
         <image name="background1.png" width="320" height="2250"/>
         <image name="drag002.png" width="227" height="62"/>
-        <image name="menuBackground.png" width="375" height="164"/>
+        <image name="menuBackground.png" width="375" height="200"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

@@ -162,7 +162,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		MT+Xnh9DS8X81N1368r4HfaWG3o=
+		K0U8Ml8dV648uAqE1Z9T4qOWyH0=
 		</data>
 		<key>KnobCentre.png</key>
 		<data>
@@ -186,15 +186,15 @@
 		</data>
 		<key>LUNLabelsView.nib</key>
 		<data>
-		52AOaW3P/MimbvG4R3+68nSV4Ac=
+		bJ8TwHXSoc4zKpoUWKvj/Fkxyfo=
 		</data>
 		<key>LUNNatureWireframeView.nib</key>
 		<data>
-		9uDPNfm0Kb0HnPKFTyh0EB47b9U=
+		j9KHdzeyxg9IV8Hzh9W+vbJAY4g=
 		</data>
 		<key>LUNStaticView.nib</key>
 		<data>
-		64tOKPXqRtOQUFvvEzXaoOaSZX0=
+		HiG0TdsE3ROh52nE4b9S+j8MbV8=
 		</data>
 		<key>LUNTutorialViewController/LUNTapPassingScrollView/LUNTapPassingScrollView/LUNTapPassingScrollView.h</key>
 		<data>
@@ -312,6 +312,10 @@
 		<data>
 		cCkvv0yTWyGIYroniR2RClEvAZc=
 		</data>
+		<key>Nunito-ExtraLight.ttf</key>
+		<data>
+		EB3dl544j92DwZO4lhJe5b4dyOE=
+		</data>
 		<key>Nunito-Light.ttf</key>
 		<data>
 		LkTfMAlLNcihqApU1nPZczkHqyE=
@@ -331,6 +335,118 @@
 		<key>aboutBox@2x.png</key>
 		<data>
 		u34PWfCkzZFklZ8LDlXVkdnHe2I=
+		</data>
+		<key>animalBackground1@2x.png</key>
+		<data>
+		GgohNXdE+VBpauN4btKR+qcstKQ=
+		</data>
+		<key>animalBackground1@3x.png</key>
+		<data>
+		QziLkKBATJ+WX/rQDlFppCvtZCg=
+		</data>
+		<key>animalBackground2@2x.png</key>
+		<data>
+		bCj9T2rUeiNWgr0j8mGQhB/ezus=
+		</data>
+		<key>animalBackground2@3x.png</key>
+		<data>
+		GAiimhV1qu7u9U7+CHSzfGeD/tE=
+		</data>
+		<key>animalWireframe1.imageset/Contents.json</key>
+		<data>
+		dHjhsRn3i25tiQOMaeZYLsPrxog=
+		</data>
+		<key>animalWireframe1.imageset/animalWireframe1@2x.png</key>
+		<data>
+		IoxrsWsUwz3qfYVg7n5ks0cDU7w=
+		</data>
+		<key>animalWireframe1.imageset/animalWireframe1@3x.png</key>
+		<data>
+		F3ExcmEZLded5Yt0IpJv3SwIs3A=
+		</data>
+		<key>animalWireframe1@2x.png</key>
+		<data>
+		Be8KX1J93P7HOKTcCTZ8CRXJDJc=
+		</data>
+		<key>animalWireframe1@3x.png</key>
+		<data>
+		ftKpltPKj4ZxgZYqoVPWoBQP+ek=
+		</data>
+		<key>animalWireframe2.imageset/Contents.json</key>
+		<data>
+		oybZP5GVgkWXP6bOSfs4S8qouBU=
+		</data>
+		<key>animalWireframe2.imageset/animalWireframe2@2x.png</key>
+		<data>
+		x4T+BHYEFxlVDlvyyuMmQY+Cig8=
+		</data>
+		<key>animalWireframe2.imageset/animalWireframe2@3x.png</key>
+		<data>
+		phtbKOZyVPjnfptLfLaEy5G6WQE=
+		</data>
+		<key>animalWireframe2@2x.png</key>
+		<data>
+		ZVeDA2w/MV1HL+KHRPKHXyJIQF0=
+		</data>
+		<key>animalWireframe2@3x.png</key>
+		<data>
+		szkEg5XxiKOiPH9KKbub1m51rvE=
+		</data>
+		<key>animalWireframe3.imageset/Contents.json</key>
+		<data>
+		Os3ORrYcO1KeuWBKB8wXZlvTOc0=
+		</data>
+		<key>animalWireframe3.imageset/animalWireframe3@2x.png</key>
+		<data>
+		v5O4uOELekdyQJ2Jt6fDYrmyOUQ=
+		</data>
+		<key>animalWireframe3.imageset/animalWireframe3@3x.png</key>
+		<data>
+		nmUX59SP6XUfwl4wO6aGJT4eYAY=
+		</data>
+		<key>animalWireframe3.imageset/icon1.imageset/Contents.json</key>
+		<data>
+		vWz75MWgt+C+EyKy0M12O0V6ACE=
+		</data>
+		<key>animalWireframe3.imageset/icon1.imageset/icon1@2x.png</key>
+		<data>
+		gd8fGfv4rbrhR52QqOE3rfg6qZE=
+		</data>
+		<key>animalWireframe3.imageset/icon1.imageset/icon1@3x.png</key>
+		<data>
+		NjuyZMx/DUUZLYoah5BnC3jUN08=
+		</data>
+		<key>animalWireframe3.imageset/icon2.imageset/Contents.json</key>
+		<data>
+		RosGEDFVop78fL0IWR0HR6QZNoQ=
+		</data>
+		<key>animalWireframe3.imageset/icon2.imageset/icon2@2x.png</key>
+		<data>
+		BdvNLjrSAgeKXqePOntpmYJ/ABE=
+		</data>
+		<key>animalWireframe3.imageset/icon2.imageset/icon2@3x.png</key>
+		<data>
+		07e4FEg890GsGdYGkhLc/LHUtPE=
+		</data>
+		<key>animalWireframe3.imageset/icon3.imageset/Contents.json</key>
+		<data>
+		lFhYEde73ZnMS7LsGoljmzLS6hY=
+		</data>
+		<key>animalWireframe3.imageset/icon3.imageset/icon3@2x.png</key>
+		<data>
+		te4zTzgbDsJkcA9eHQfCcOMSi8U=
+		</data>
+		<key>animalWireframe3.imageset/icon3.imageset/icon3@3x.png</key>
+		<data>
+		MFMQySjFpfdQB/8Tl6/S3+aUXEc=
+		</data>
+		<key>animalWireframe3@2x.png</key>
+		<data>
+		6d7XhC/fHbLpakz2x731zfd9feQ=
+		</data>
+		<key>animalWireframe3@3x.png</key>
+		<data>
+		7DaOHxJWNZj3uiQs2dMfxY4gMSg=
 		</data>
 		<key>background1@2x.png</key>
 		<data>
@@ -413,7 +529,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			gKzQnHHrs6Vw4X5rgIlO+fCU93w=
+			E93AI72BP7CdpumpGM4rQFNLcyY=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -422,7 +538,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			+QLrNcwaWPoU4Wj5ZCITwrFw1FA=
+			ntVlqC8j808XCoiv2t2NkgJPeKs=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -431,7 +547,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			LW1Rvu6s9JH1BH30B0t7rWyhj6E=
+			SPZReZbJxIjvInQRppBb4dKgS9c=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -449,7 +565,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			n7721+ZYhgfLkAwj4llWkkU0Hak=
+			pQ6ZT0TMq4xi3J7rOoniNKZDPOc=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -458,7 +574,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			LH/1+PlDO+YMOY9MIvb7SR5M/5M=
+			MAaZjYvlortHojheKb8cOgZ6Ud0=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -467,7 +583,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			iMFnJc+Qzf8/C96pPKFbklWxkmk=
+			wyXI7+hM+A0+RfhSGkhq62VkAUE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -528,6 +644,14 @@
 		<data>
 		v1fxQtkJN70ACH1RBkUHQfc4DGs=
 		</data>
+		<key>introSkyBackground@2x.png</key>
+		<data>
+		A5N6mY2ar8AIYb34qPqbVZkl1UI=
+		</data>
+		<key>introSkyBackground@3x.png</key>
+		<data>
+		BGt2n2n+XlA4X5w7KWyYGarasF8=
+		</data>
 		<key>leftarrow2@2x.png</key>
 		<data>
 		4t+ANueY4wFY2lDBpmPIa1WMD1s=
@@ -546,7 +670,7 @@
 		</data>
 		<key>menuBackground@2x.png</key>
 		<data>
-		5DT8v0bpvfTTgx672jNA/qKCHIg=
+		8va7XtDKUAkjqCTyUTaH5aRFoIU=
 		</data>
 		<key>rightarrow2@2x.png</key>
 		<data>
@@ -1083,33 +1207,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			52AOaW3P/MimbvG4R3+68nSV4Ac=
+			bJ8TwHXSoc4zKpoUWKvj/Fkxyfo=
 			</data>
 			<key>hash2</key>
 			<data>
-			Iza4bl8wRg95VO301fkPGDPssVGj0GQre8M15OlVK8k=
+			ZkRIRxAi9aMml0vZ5Y1kIVc5tlAUuViPLuQU0Du9t1c=
 			</data>
 		</dict>
 		<key>LUNNatureWireframeView.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			9uDPNfm0Kb0HnPKFTyh0EB47b9U=
+			j9KHdzeyxg9IV8Hzh9W+vbJAY4g=
 			</data>
 			<key>hash2</key>
 			<data>
-			DtLJacRyglWeIqIH8i9HQMfeRN/glCtF41skjRkBNfI=
+			QsxCkrZz0PdpW9MaqGbluEK2OEDoZJO6cb55Tes/7VQ=
 			</data>
 		</dict>
 		<key>LUNStaticView.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			64tOKPXqRtOQUFvvEzXaoOaSZX0=
+			HiG0TdsE3ROh52nE4b9S+j8MbV8=
 			</data>
 			<key>hash2</key>
 			<data>
-			/Nb4wH4435UngK27XzPTBSXaQ7kCTk1ND/JkUCFeBhw=
+			kPoTMIDsUw6xmZgjDctQNOJ9aERiOb3v2SxWoyfgzG8=
 			</data>
 		</dict>
 		<key>LUNTutorialViewController/LUNTapPassingScrollView/LUNTapPassingScrollView/LUNTapPassingScrollView.h</key>
@@ -1431,6 +1555,17 @@
 			RSX+wNLxghw6sDm9CJEw7WXxQoJJUyHddopr+zS3WQI=
 			</data>
 		</dict>
+		<key>Nunito-ExtraLight.ttf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			EB3dl544j92DwZO4lhJe5b4dyOE=
+			</data>
+			<key>hash2</key>
+			<data>
+			7KXHUFja5wNV17wl5LSViavyNo7olmLiBZjh4GpvqpY=
+			</data>
+		</dict>
 		<key>Nunito-Light.ttf</key>
 		<dict>
 			<key>hash</key>
@@ -1473,6 +1608,314 @@
 			<key>hash2</key>
 			<data>
 			4oEgttfpSV6A5SKtrYfWqmOvMJn7WL971Vcq1cJ6tVQ=
+			</data>
+		</dict>
+		<key>animalBackground1@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			GgohNXdE+VBpauN4btKR+qcstKQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			qXo/9OXnon7RRaZTCR4jSqoKk42K+x6SRLLV6z1vpds=
+			</data>
+		</dict>
+		<key>animalBackground1@3x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			QziLkKBATJ+WX/rQDlFppCvtZCg=
+			</data>
+			<key>hash2</key>
+			<data>
+			pDgFBC1fY3wrglYLkv2l0LXWolpWeqn+1wjTg5N9sQ4=
+			</data>
+		</dict>
+		<key>animalBackground2@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			bCj9T2rUeiNWgr0j8mGQhB/ezus=
+			</data>
+			<key>hash2</key>
+			<data>
+			ymZDfIZmdQ/jyP8vW9/75XWB0nlxKE4RPneQ9rJFjRk=
+			</data>
+		</dict>
+		<key>animalBackground2@3x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			GAiimhV1qu7u9U7+CHSzfGeD/tE=
+			</data>
+			<key>hash2</key>
+			<data>
+			okrC74sHGey3qrnYuHoO8yrQo7NJXPwnXMaHlbxfqZo=
+			</data>
+		</dict>
+		<key>animalWireframe1.imageset/Contents.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			dHjhsRn3i25tiQOMaeZYLsPrxog=
+			</data>
+			<key>hash2</key>
+			<data>
+			0tMDAqMd7dkRj3mRzdOIK+D5C4YorfESZVK/RjgfEq0=
+			</data>
+		</dict>
+		<key>animalWireframe1.imageset/animalWireframe1@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			IoxrsWsUwz3qfYVg7n5ks0cDU7w=
+			</data>
+			<key>hash2</key>
+			<data>
+			d+ImvW8Yo2Mgspk/xIbg8r6XZTPbA8FP/DWc+zalweU=
+			</data>
+		</dict>
+		<key>animalWireframe1.imageset/animalWireframe1@3x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			F3ExcmEZLded5Yt0IpJv3SwIs3A=
+			</data>
+			<key>hash2</key>
+			<data>
+			1Az3MdrambxEAyF2j3iX5vejZ+kjgFaERdizIW+hlJE=
+			</data>
+		</dict>
+		<key>animalWireframe1@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Be8KX1J93P7HOKTcCTZ8CRXJDJc=
+			</data>
+			<key>hash2</key>
+			<data>
+			9ILwnr/VwtDuW1w98WaZY7fFMRK4lCN4jysJ0n+AdPA=
+			</data>
+		</dict>
+		<key>animalWireframe1@3x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ftKpltPKj4ZxgZYqoVPWoBQP+ek=
+			</data>
+			<key>hash2</key>
+			<data>
+			1XfM8xyHda+VgIJxXP//EPeKi/3DqykFLe8nD8fNnvk=
+			</data>
+		</dict>
+		<key>animalWireframe2.imageset/Contents.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			oybZP5GVgkWXP6bOSfs4S8qouBU=
+			</data>
+			<key>hash2</key>
+			<data>
+			y9bKOseOwkn7hrmKNZi2A64ojTTTSJfEbANYvf3+bXg=
+			</data>
+		</dict>
+		<key>animalWireframe2.imageset/animalWireframe2@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			x4T+BHYEFxlVDlvyyuMmQY+Cig8=
+			</data>
+			<key>hash2</key>
+			<data>
+			/zxcNvlWejDrFS34wF6PGBElvc1WXZK7YNHYbst1IFo=
+			</data>
+		</dict>
+		<key>animalWireframe2.imageset/animalWireframe2@3x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			phtbKOZyVPjnfptLfLaEy5G6WQE=
+			</data>
+			<key>hash2</key>
+			<data>
+			BLzjAba6lxzOr+txNoogw412J1feo04MfD63ucvwbak=
+			</data>
+		</dict>
+		<key>animalWireframe2@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ZVeDA2w/MV1HL+KHRPKHXyJIQF0=
+			</data>
+			<key>hash2</key>
+			<data>
+			x7Xn3mJpNnYAzCSm4rTNbh9iAimaHwbd6436JsLIZtY=
+			</data>
+		</dict>
+		<key>animalWireframe2@3x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			szkEg5XxiKOiPH9KKbub1m51rvE=
+			</data>
+			<key>hash2</key>
+			<data>
+			IG/QY3tTN21u1uTiA5IzERC5Q9pSnsWdhqF3pVNBpqQ=
+			</data>
+		</dict>
+		<key>animalWireframe3.imageset/Contents.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Os3ORrYcO1KeuWBKB8wXZlvTOc0=
+			</data>
+			<key>hash2</key>
+			<data>
+			u35ZKqFul2FkJMGLMh1bjBhQQczVUr8KpNviQrYFRNs=
+			</data>
+		</dict>
+		<key>animalWireframe3.imageset/animalWireframe3@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			v5O4uOELekdyQJ2Jt6fDYrmyOUQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			rFpItutDVRT1zd7PmKoMof6HtqbGPSmayh6sDds4D3c=
+			</data>
+		</dict>
+		<key>animalWireframe3.imageset/animalWireframe3@3x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			nmUX59SP6XUfwl4wO6aGJT4eYAY=
+			</data>
+			<key>hash2</key>
+			<data>
+			jB+xtz4/2FY/OfrXv4Ex5obuyVcfq2pOq8LkNtp0ZgA=
+			</data>
+		</dict>
+		<key>animalWireframe3.imageset/icon1.imageset/Contents.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			vWz75MWgt+C+EyKy0M12O0V6ACE=
+			</data>
+			<key>hash2</key>
+			<data>
+			a/jqXTNKQWLiy5bBNpX/kuU1hzBA+YZtoU/H7RO2jJM=
+			</data>
+		</dict>
+		<key>animalWireframe3.imageset/icon1.imageset/icon1@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			gd8fGfv4rbrhR52QqOE3rfg6qZE=
+			</data>
+			<key>hash2</key>
+			<data>
+			yhUY8wA4VH07IUOgLb/6+FbimBYX9XvU6wHtt1n6eVg=
+			</data>
+		</dict>
+		<key>animalWireframe3.imageset/icon1.imageset/icon1@3x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			NjuyZMx/DUUZLYoah5BnC3jUN08=
+			</data>
+			<key>hash2</key>
+			<data>
+			el2JFtphvCIyhqg4drMbnolGyP0IAhtRYDv7RfIwEwA=
+			</data>
+		</dict>
+		<key>animalWireframe3.imageset/icon2.imageset/Contents.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			RosGEDFVop78fL0IWR0HR6QZNoQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			zPwRWZIgjrhOuIxxquxnu4Pc/kyJv9+f28AEHa2cSJM=
+			</data>
+		</dict>
+		<key>animalWireframe3.imageset/icon2.imageset/icon2@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			BdvNLjrSAgeKXqePOntpmYJ/ABE=
+			</data>
+			<key>hash2</key>
+			<data>
+			p1JEh+SGg/hrB3wk7eVSNbD4AFP6Yi058a/RVrfbt80=
+			</data>
+		</dict>
+		<key>animalWireframe3.imageset/icon2.imageset/icon2@3x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			07e4FEg890GsGdYGkhLc/LHUtPE=
+			</data>
+			<key>hash2</key>
+			<data>
+			jafDWlbyHRFWWK0rd1uH6LIvZ4OBdvGARCRRq6r+RSY=
+			</data>
+		</dict>
+		<key>animalWireframe3.imageset/icon3.imageset/Contents.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			lFhYEde73ZnMS7LsGoljmzLS6hY=
+			</data>
+			<key>hash2</key>
+			<data>
+			Vubt3L4EBjeL6K/5KQJijveJRSJn85afxbOnLednYCE=
+			</data>
+		</dict>
+		<key>animalWireframe3.imageset/icon3.imageset/icon3@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			te4zTzgbDsJkcA9eHQfCcOMSi8U=
+			</data>
+			<key>hash2</key>
+			<data>
+			VHxB67LsVLSbbNJlO5poTAf4vrI+Qpa4oMOnLuJH6DU=
+			</data>
+		</dict>
+		<key>animalWireframe3.imageset/icon3.imageset/icon3@3x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			MFMQySjFpfdQB/8Tl6/S3+aUXEc=
+			</data>
+			<key>hash2</key>
+			<data>
+			2oHblMFi7HGq2AswJmJkbPVO9LYGWwmFa5NLx5/8bQs=
+			</data>
+		</dict>
+		<key>animalWireframe3@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			6d7XhC/fHbLpakz2x731zfd9feQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			NxXQCkuzun3+T4xA4B+TWiUjIJYRN7Y3v9k2ZZJIxTQ=
+			</data>
+		</dict>
+		<key>animalWireframe3@3x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			7DaOHxJWNZj3uiQs2dMfxY4gMSg=
+			</data>
+			<key>hash2</key>
+			<data>
+			lGvyfg2RaSxh9voGQU03yRoawyIZP4cv3YYlPsLoxTE=
 			</data>
 		</dict>
 		<key>background1@2x.png</key>
@@ -1679,11 +2122,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			gKzQnHHrs6Vw4X5rgIlO+fCU93w=
+			E93AI72BP7CdpumpGM4rQFNLcyY=
 			</data>
 			<key>hash2</key>
 			<data>
-			TkggX3A+sffETlksMf1GPCI/DwR8dHbYtVYkw1BUQmM=
+			Sel5AaSMH3WgrTDI7P60yNYIwSr6hE88bNhWjtAr1Bo=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1692,11 +2135,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			+QLrNcwaWPoU4Wj5ZCITwrFw1FA=
+			ntVlqC8j808XCoiv2t2NkgJPeKs=
 			</data>
 			<key>hash2</key>
 			<data>
-			B91oXTU+LAbLfsUGwD076q16HQwC29wo7gA9r1rqx18=
+			qG01tTiwZiQKHLZKbp19Kmt03IKtfbaSWombz14uPNo=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1705,11 +2148,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			LW1Rvu6s9JH1BH30B0t7rWyhj6E=
+			SPZReZbJxIjvInQRppBb4dKgS9c=
 			</data>
 			<key>hash2</key>
 			<data>
-			Y0YXrSJlU7TLZd9vh8iFwDv5bzHAJHHpKKM4Y4lCNhw=
+			7hCrnT3ZM7nlT9HEKokHxWAuWTE95n84oxGCDkLUWnE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1731,11 +2174,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			n7721+ZYhgfLkAwj4llWkkU0Hak=
+			pQ6ZT0TMq4xi3J7rOoniNKZDPOc=
 			</data>
 			<key>hash2</key>
 			<data>
-			phxh/vRbMXwC7Nu/Jk79WmBf5zHnVhr1b4oOE2oSidg=
+			X2l0KeE4+oh4ktQDtRgB9XYxVDxqzJ0Wx1D3nFuuqrk=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1744,11 +2187,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			LH/1+PlDO+YMOY9MIvb7SR5M/5M=
+			MAaZjYvlortHojheKb8cOgZ6Ud0=
 			</data>
 			<key>hash2</key>
 			<data>
-			c74jjXgtOsbWDWiVGScv9JXYh3aWnjEILxceK4uLj2A=
+			GKIAH3R/qYTHtg6MT9FxpEBvF9qDOXR7awV6/rnGg6g=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1757,11 +2200,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			iMFnJc+Qzf8/C96pPKFbklWxkmk=
+			wyXI7+hM+A0+RfhSGkhq62VkAUE=
 			</data>
 			<key>hash2</key>
 			<data>
-			I7acDCQG76IZWrF7VWFyU4UeKagLkSz29FzUx9kTgdU=
+			07o0A5h6i8D47HVnl7w5vOdN3hz0khc36NlXF0ZKrWA=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1920,6 +2363,28 @@
 			DBdlVoR5024Uhre8KTklctQ1dIxD9npqU5GVELgRMz8=
 			</data>
 		</dict>
+		<key>introSkyBackground@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			A5N6mY2ar8AIYb34qPqbVZkl1UI=
+			</data>
+			<key>hash2</key>
+			<data>
+			+M192iLhhgKhqrKQD4MwMG4pUXrtuFUzTDhlxkhCxnk=
+			</data>
+		</dict>
+		<key>introSkyBackground@3x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			BGt2n2n+XlA4X5w7KWyYGarasF8=
+			</data>
+			<key>hash2</key>
+			<data>
+			LSiU2FnseKkc17tvED7SHMtaKkNC6iZk5GJX8YEhUQU=
+			</data>
+		</dict>
 		<key>leftarrow2@2x.png</key>
 		<dict>
 			<key>hash</key>
@@ -1968,11 +2433,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			5DT8v0bpvfTTgx672jNA/qKCHIg=
+			8va7XtDKUAkjqCTyUTaH5aRFoIU=
 			</data>
 			<key>hash2</key>
 			<data>
-			zGX2B63APTVdXVTe2mD/NTmXtY+R3jdhUETHF1UBU4U=
+			svfwCRzwcg6IhImuavs03LDqRPSqmyBbUkRZi6x9ibw=
 			</data>
 		</dict>
 		<key>rightarrow2@2x.png</key>

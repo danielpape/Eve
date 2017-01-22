@@ -63,6 +63,10 @@ NSArray *validProducts;
     self.wednesdayButton.selected = YES;
     self.thursdayButton.selected = YES;
     self.fridayButton.selected = YES;
+    
+    self.daysConfirmButton.layer.cornerRadius = 7.5f;
+    self.settingsConfirmButton.layer.cornerRadius = 7.5f;
+    self.resetAlarmButton.layer.cornerRadius = 7.5f;
    
     NSDateFormatter *labelFormat = [[NSDateFormatter alloc] init];
     dialTime = [NSString stringWithFormat:@"%@", [labelFormat stringFromDate:[[NSDate date] dateByAddingTimeInterval: self.rotaryKnob.value*800]]];
@@ -83,14 +87,11 @@ NSArray *validProducts;
     float minutesPercentage = (minutesPastHour/60) *100;
     
     float Hm = (hoursInt*100)+minutesPercentage;
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:0];
-
+    
     CGPoint initcenter = [_skyBack center];
     initcenter.x = self.view.bounds.size.width/2;
     initcenter.y = Hm - 400;
     [_skyBack setCenter:initcenter];
-    [UIView commitAnimations];
     
     if ([[defaults objectForKey:@"background"]  isEqual: @"background1.png"]){
         self.backgroundLabel.text = @"Summer";
@@ -104,10 +105,11 @@ NSArray *validProducts;
     
     [self fetchAvailableProducts];
     
+    [self rotaryKnobDidChange];
+    
 }
 
 - (void)viewDidUnload {
-    [self setKnobCentre:nil];
     [super viewDidUnload];
 }
 
@@ -163,18 +165,8 @@ NSArray *validProducts;
     }
     else if (_themeSegmentControl.selectedSegmentIndex==1)
     {
-        backgroundName = @"background2.png";
-        self.skyBackground.image = [UIImage imageNamed:@"background2"];
-    }
-    else if (_themeSegmentControl.selectedSegmentIndex==2)
-    {
         backgroundName = @"background3.png";
         self.skyBackground.image = [UIImage imageNamed:@"background3"];
-    }
-    else if (_themeSegmentControl.selectedSegmentIndex==3)
-    {
-        backgroundName = @"background4.png";
-        self.skyBackground.image = [UIImage imageNamed:@"background4"];
     }
 }
 

@@ -26,6 +26,7 @@
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) IBOutlet UIImageView *skyBack;
 @property (weak, nonatomic) IBOutlet UILabel *hoursLabel;
+@property (weak, nonatomic) IBOutlet UIButton *resetAlarmButton;
 
 -(IBAction)tapResetButton:(id)sender;
 

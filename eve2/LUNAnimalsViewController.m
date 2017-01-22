@@ -56,7 +56,7 @@ static const CGFloat kLUNNatureBackgroundShift = 175.0f;
                     @"SET YOUR WAKE TIME",
                     @"EVE WILL REMIND YOU"];
     
-    self.texts = @[@"Our quality prints are the perfect way to\nenjoy your best memories!",
+    self.texts = @[@"You feel the best after a good night's sleep.",
                    @"Our quality prints are the perfect way to\nenjoy your best memories!",
                    @"Our quality prints are the perfect way to\nenjoy your best memories!"];
 }
@@ -95,14 +95,14 @@ static const CGFloat kLUNNatureBackgroundShift = 175.0f;
         eveViewController *eveController = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([eveViewController class])];
         [self presentViewController:eveController animated:YES completion:nil];
     };
-    [staticView setupButtonText:@"LET'S START"];
+    [staticView setupButtonText:@"Let's start"];
     [staticView setupPageControlsDotColor:[UIColor colorWithRed:122.0f / 255.0f green:122.0f / 255.0f blue:122.0f / 255.0f alpha:0.24f]];
     [staticView setupPageControlsSelectedDotColors:@[[UIColor blackColor], [UIColor blackColor], [UIColor blackColor]]];
     [staticView needShadow:NO];
     [staticView setupButtonBackgroundColor:[UIColor colorWithRed:59.0f / 255.0f green:59.0f / 255.0f blue:59.0f / 255.0f alpha:1.0f]];
     [staticView setupButtonCornerRadius:7.5f];
     [staticView setupButtonTextColor:[UIColor whiteColor]];
-    [staticView setupButtonTextFont:[UIFont fontWithName:@"Nunito-Bold" size:14]];
+    [staticView setupButtonTextFont:[UIFont fontWithName:@"Nunito-Regular" size:18]];
     [staticView setupButtonWidth: 428.0f/640.0f * CGRectGetWidth(self.view.frame)];
     [staticView setupButtonHeight: 80.0f/1136.0f * CGRectGetHeight(self.view.frame)];
     staticView.backgroundColor = [UIColor whiteColor];
@@ -129,13 +129,8 @@ static const CGFloat kLUNNatureBackgroundShift = 175.0f;
 #pragma mark - LUNTutorialBackgroundDataSource
 
 - (__kindof UIView *)dynamicBackgroundViewAtIndex:(NSInteger)index {
-    UIImageView *imageViewForIndex = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"animalBackground%ld", (long)index+1]]];
-    if (index != 0) {
-        imageViewForIndex.alpha = 0.0f;
-        imageViewForIndex.contentMode = UIViewContentModeScaleAspectFill;
-    } else {
+    UIImageView *imageViewForIndex = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"introSkyBackground"]]];
         imageViewForIndex.contentMode = UIViewContentModeTopRight;
-    }
     return imageViewForIndex;
 }
 

@@ -152,6 +152,8 @@
 - (IBAction)pressSettingsContinueButton:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *tapIntroDismissButton;
 - (IBAction)tapIntroDismissButton:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *daysConfirmButton;
+@property (weak, nonatomic) IBOutlet UIButton *settingsConfirmButton;
 
 - (void) setMondayAlarm;
 - (void) setTuesdayAlarm;

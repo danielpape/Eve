@@ -60,8 +60,9 @@
 	<false/>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Nunito-Bold.ttf</string>
 		<string>Nunito-Regular.ttf</string>
+		<string>Nunito-ExtraLight.ttf</string>
+		<string>Nunito-Bold.ttf</string>
 		<string>Nunito-Light.ttf</string>
 	</array>
 </dict>
