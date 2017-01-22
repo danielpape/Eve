@@ -33,12 +33,6 @@ NSArray *validProducts;
     hourOfSleep = 8;
     isPlaying = NO;
     
-    _introView.layer.cornerRadius = 16;
-    _introView.layer.masksToBounds = YES;
-
-    self.rotaryKnob.alpha = 0;
-    self.setAlarmButton.alpha = 0;
-    
     defaults = [[NSUserDefaults alloc]init];
     
     if ([defaults objectForKey:@"background"] != nil) {
@@ -883,15 +877,6 @@ NSArray *validProducts;
     CGPoint settingsCenter = [self.settingsView center];
     settingsCenter.y = self.view.bounds.size.height-65;
     [self.settingsView setCenter:settingsCenter];
-    [UIView commitAnimations];
-}
-
-- (IBAction)tapIntroDismissButton:(id)sender {
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:0.3];
-    self.introView.alpha = 0;
-    self.rotaryKnob.alpha = 0.4;
-    self.setAlarmButton.alpha = 1;
     [UIView commitAnimations];
 }
 

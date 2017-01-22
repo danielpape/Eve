@@ -120,7 +120,6 @@
 - (IBAction)hoursSliderValueChange:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *hoursLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *menuBackgroundImage;
-@property (weak, nonatomic) IBOutlet UIView *introView;
 
 
 - (IBAction)tapResetAlarmButton:(id)sender;

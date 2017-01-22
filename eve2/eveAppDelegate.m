@@ -22,7 +22,7 @@
         self.window.rootViewController = controller;
     }else{
         
-        UIViewController *controller = [self.window.rootViewController.storyboard instantiateViewControllerWithIdentifier:@"eveView"];
+        UIViewController *controller = [self.window.rootViewController.storyboard instantiateViewControllerWithIdentifier:@"onboardingView"];
         self.window.rootViewController = controller;
        // UIStoryboard *setView = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
        // initialViewController = [setView instantiateInitialViewController];
