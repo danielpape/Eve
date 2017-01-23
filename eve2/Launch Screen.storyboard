@@ -8,6 +8,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Nunito-ExtraLight.ttf">
+            <string>Nunito-ExtraLight</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -24,20 +29,20 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6tF-du-GFr">
                                 <rect key="frame" x="127" y="273" width="120" height="120"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="eve" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLy-D5-D9G">
-                                        <rect key="frame" x="0.0" y="-6" width="120" height="60"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EVE ALARM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLy-D5-D9G">
+                                        <rect key="frame" x="-48" y="-6" width="217" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="FQa-OH-SQ4"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <fontDescription key="fontDescription" name="Nunito-ExtraLight" family="Nunito" pointSize="32"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="bLy-D5-D9G" firstAttribute="leading" secondItem="6tF-du-GFr" secondAttribute="leading" id="G6A-Cc-hsD"/>
+                                    <constraint firstItem="bLy-D5-D9G" firstAttribute="leading" secondItem="6tF-du-GFr" secondAttribute="leading" constant="-48" id="G6A-Cc-hsD"/>
                                     <constraint firstItem="bLy-D5-D9G" firstAttribute="top" secondItem="6tF-du-GFr" secondAttribute="top" constant="-6" id="dC4-Fm-VhC"/>
-                                    <constraint firstAttribute="trailing" secondItem="bLy-D5-D9G" secondAttribute="trailing" id="gfo-l7-Vpz"/>
+                                    <constraint firstAttribute="trailing" secondItem="bLy-D5-D9G" secondAttribute="trailing" constant="-49" id="gfo-l7-Vpz"/>
                                     <constraint firstAttribute="width" constant="120" id="jHq-lY-jPx"/>
                                     <constraint firstAttribute="height" constant="120" id="psX-N4-d2G"/>
                                 </constraints>

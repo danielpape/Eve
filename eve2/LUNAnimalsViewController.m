@@ -56,9 +56,9 @@ static const CGFloat kLUNNatureBackgroundShift = 175.0f;
                     @"SET YOUR WAKE TIME",
                     @"EVE WILL REMIND YOU"];
     
-    self.texts = @[@"You feel the best after a good night's sleep.",
-                   @"Our quality prints are the perfect way to\nenjoy your best memories!",
-                   @"Our quality prints are the perfect way to\nenjoy your best memories!"];
+    self.texts = @[@"You feel the best after a good night's sleep. Eve Alarm sends you a reminder when it's time to go to bed.",
+                   @"Use the wheel to set what time you'd like to wake up and set your rest length. We recommend at least 8 hours!",
+                   @"Eve will send you a gentle reminder when it's time to sleep. Sometimes you just need a reminder from distractions!"];
 }
 
 - (void)reloadData {
