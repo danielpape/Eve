@@ -286,7 +286,7 @@
 		37EBDCBF17381D350090D5DC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		37EE1E2E17667A3400335EFC /* evelogo4_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = evelogo4_114.png; sourceTree = "<group>"; };
 		37EE1E3017667A4300335EFC /* evelogo4_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = evelogo4_57.png; sourceTree = "<group>"; };
-		37F1B29B1737FDDD00DFEBCB /* Eve.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eve.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		37F1B29B1737FDDD00DFEBCB /* Eve Alarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Eve Alarm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37F1B29E1737FDDD00DFEBCB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		37F1B2A01737FDDD00DFEBCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		37F1B2A21737FDDD00DFEBCB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -444,7 +444,7 @@
 		37F1B29C1737FDDD00DFEBCB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				37F1B29B1737FDDD00DFEBCB /* Eve.app */,
+				37F1B29B1737FDDD00DFEBCB /* Eve Alarm.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -583,7 +583,7 @@
 			);
 			name = eve2;
 			productName = eve2;
-			productReference = 37F1B29B1737FDDD00DFEBCB /* Eve.app */;
+			productReference = 37F1B29B1737FDDD00DFEBCB /* Eve Alarm.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -849,7 +849,7 @@
 				GCC_PREFIX_HEADER = "eve2/eve2-Prefix.pch";
 				INFOPLIST_FILE = "eve2/eve2-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = Eve;
+				PRODUCT_NAME = "Eve Alarm";
 				PROVISIONING_PROFILE = "fd56c497-6050-4032-b13b-98febe53931b";
 				PROVISIONING_PROFILE_SPECIFIER = "Eve Development";
 				WRAPPER_EXTENSION = app;
@@ -871,7 +871,7 @@
 				GCC_PREFIX_HEADER = "eve2/eve2-Prefix.pch";
 				INFOPLIST_FILE = "eve2/eve2-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = Eve;
+				PRODUCT_NAME = "Eve Alarm";
 				PROVISIONING_PROFILE = "093bed94-2e02-4185-a50e-bf226a5254eb";
 				PROVISIONING_PROFILE_SPECIFIER = "Eve Distribution";
 				WRAPPER_EXTENSION = app;
