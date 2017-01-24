@@ -108,7 +108,7 @@ NSArray *validProducts;
         self.backgroundLabel.text = @"Spring";
     }
     
-    [self fetchAvailableProducts];
+    // [self fetchAvailableProducts];
     
     [self rotaryKnobDidChange];
     
