@@ -727,12 +727,7 @@ NSArray *validProducts;
 }
 
 -(NSString *) wakeMessage{
-    NSString* wakeMessageString;
-    NSArray* wakeMessageArr = [NSArray arrayWithObjects: @"An early-morning walk is a blessing for the whole day - Henry David Thoreau",
-                        @"Think in the morning, act in the noon, eat in the evening, sleep in the night - William Blake", @"Each morning when I awake, I exprience again a supreme pleasure: That of being Salvador Dali - Salvador Dali", @"Lose an hour in the morning and you will spend all day looking for it - Richard Whately", @"When I wake up in the morning, I feel just like any other insecure 24-year-old girl - Lady Gaga",
-                        @"I became a musician so I didn't have to wake up at 6 in the morning - Norah Jones", @"I get up in the morning, looking for an adventure - George Foreman!", nil];
-    NSUInteger randomIndex = arc4random() % [wakeMessageArr count];
-    wakeMessageString = [wakeMessageArr objectAtIndex: randomIndex];
+    NSString *wakeMessageString = [NSString stringWithFormat:@"Good morning, it's time to wake up!"];
     return wakeMessageString;
 }
 
@@ -973,7 +968,7 @@ NSArray *validProducts;
     mondayReminderAlarm.fireDate = reminderDate;
     mondayReminderAlarm.repeatInterval = NSWeekCalendarUnit;
     mondayReminderAlarm.soundName = @"sleepAlarm1.wav";
-    mondayReminderAlarm.alertBody = @"Time for bed!";
+    mondayReminderAlarm.alertBody = @"If you go to bed now you'll feel refreshed in the morning";
     
     if ([reminderDate compare:[NSDate date]] == NSOrderedDescending) {
         NSLog(@"Reminder Alarm Set for %@",reminderDate);
@@ -1088,7 +1083,7 @@ NSArray *validProducts;
     
     tuesdayReminderAlarm.fireDate = reminderDate;
     tuesdayReminderAlarm.repeatInterval = NSWeekCalendarUnit;
-    tuesdayReminderAlarm.alertBody = @"Time for bed!";
+    tuesdayReminderAlarm.alertBody = @"If you go to bed now you'll feel refreshed in the morning";
     tuesdayReminderAlarm.soundName = @"sleepAlarm1.wav";
     
     if ([reminderDate compare:[NSDate date]] == NSOrderedDescending) {
@@ -1205,7 +1200,7 @@ NSArray *validProducts;
     
     wednesdayReminderAlarm.fireDate = reminderDate;
     wednesdayReminderAlarm.repeatInterval = NSWeekCalendarUnit;
-    wednesdayReminderAlarm.alertBody = @"Time for bed!";
+    wednesdayReminderAlarm.alertBody = @"If you go to bed now you'll feel refreshed in the morning";
     wednesdayReminderAlarm.soundName = @"sleepAlarm1.wav";
     
     if ([reminderDate compare:[NSDate date]] == NSOrderedDescending) {
@@ -1321,7 +1316,7 @@ NSArray *validProducts;
     
     thursdayReminderAlarm.fireDate = reminderDate;
     thursdayReminderAlarm.repeatInterval = NSWeekCalendarUnit;
-    thursdayReminderAlarm.alertBody = @"Time for bed!";
+    thursdayReminderAlarm.alertBody = @"If you go to bed now you'll feel refreshed in the morning";
     thursdayReminderAlarm.soundName = @"sleepAlarm1.wav";
     
     if ([reminderDate compare:[NSDate date]] == NSOrderedDescending) {
@@ -1436,7 +1431,7 @@ NSArray *validProducts;
     
     fridayReminderAlarm.fireDate = reminderDate;
     fridayReminderAlarm.repeatInterval = NSWeekCalendarUnit;
-    fridayReminderAlarm.alertBody = @"Time for bed!";
+    fridayReminderAlarm.alertBody = @"If you go to bed now you'll feel refreshed in the morning";
     fridayReminderAlarm.soundName = @"sleepAlarm1.wav";
     
     if ([reminderDate compare:[NSDate date]] == NSOrderedDescending) {
@@ -1551,7 +1546,7 @@ NSArray *validProducts;
     
     saturdayReminderAlarm.fireDate = reminderDate;
     saturdayReminderAlarm.repeatInterval = NSWeekCalendarUnit;
-    saturdayReminderAlarm.alertBody = @"Time for bed!";
+    saturdayReminderAlarm.alertBody = @"If you go to bed now you'll feel refreshed in the morning";
     saturdayReminderAlarm.soundName = @"sleepAlarm1.wav";
     
     if ([reminderDate compare:[NSDate date]] == NSOrderedDescending) {
@@ -1669,7 +1664,7 @@ NSArray *validProducts;
     
     sundayReminderAlarm.fireDate = reminderDate;
     sundayReminderAlarm.repeatInterval = NSWeekCalendarUnit;
-    sundayReminderAlarm.alertBody = @"Time for bed!";
+    sundayReminderAlarm.alertBody = @"If you go to bed now you'll feel refreshed in the morning";
     sundayReminderAlarm.hasAction = YES;
     sundayReminderAlarm.soundName = @"sleepAlarm1.wav";
     
